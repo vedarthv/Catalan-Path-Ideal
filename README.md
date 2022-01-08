@@ -1,10 +1,10 @@
 #  Catalan-Path-Ideal
 
-A paper about the Grobner basis of an cute ideal.
+A paper about the Grobner basis of an Catalan ideal.
 
-proof.tex: the paper source ion TeX
+proof.tex: the paper source is on TeX
 
-refrences.bib: the refernce sources.
+refrences.bib: the referenced sources.
 
 ```
 > git pull
