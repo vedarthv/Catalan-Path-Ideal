@@ -163,7 +163,7 @@
 \section{Introduction} 
 Let $R = \field[y_1, \dots, y_n]$ be the polynomial ring over a field $\field$ with $\text{char}( \field) = 0$ and consider the ideal:
 $    I = \la y_1 + y_2 + \dots + y_n, y^2_1, y^2_2, \dots , y^2_n \ra \subseteq R\,.$
-We show that the graded quotient $N = R /I$ has a Hilbert series given by 
+We show that the graded quotient $N = R /I$ has the Hilbert series given by 
 $$H_N(q)=\sum_{k=0}^{\lfloor \frac{n}{2} \rfloor } f^{(n-k,k)}q^k\,,$$
  where $f^{(n-k,k)}$ is the number of standard Young tableaux of shape $(n-k,k)$, equivalently, the dimension of the irreducible symmetric group indexed by that shape. 
  These numbers are related to paths that remain above the diagonal such as Catalan paths (see Definition~\ref{catalan_path}).
@@ -234,14 +234,14 @@ $$
 $$
 \end{example}
 
-For definitions and theorems pertaining to Gr\"obner basis theory, we follow \cite{iva}.  Throughout this paper we will use the following lexicographic order.
+For definitions and theorems pertaining to Gr\"obner basis theory, we follow \cite{iva}.  Throughout this paper, we will use the following lexicographic order.
 % Definition lex order
 \begin{definition} \label{lex}
 	Let $\alpha, \beta \in \Z^n_{\geq 0}$. We say that $\alpha >_{lex} \beta$, if the leftmost nonzero entry of the vector difference $\alpha - \beta \in \Z^n_{\geq 0}$ is positive. 
 	We will write $y^\alpha >_{lex} y^\beta$ if $\alpha >_{lex} \beta$. Note that $>_{lex}$ is a monomial order \cite[\S2 \textemdash Proposition 4]{iva}. 
 \end{definition}
 
-Theorem~\ref{main_theorem} is our main theorem. To prove it, we decompose the Buchberger's algorithm into loops. The class of S-polynomials produced in each loop is either the next generation of MCP polynomials  or has a zero remainder.
+Theorem~\ref{main_theorem} is our main theorem. To prove it, we decompose the Buchberger's algorithm into loops. The division of S-polynomials produced in each loop is either the next generation of MCP polynomials  or has a zero remainder.
 % Definition MCP
 \begin{definition}  \label{MCP}
 	A sequence  $\alpha \in \{0,1\}^n$ is a {\bf Modified Catalan Path (MCP)} if there exists integers $l,m\ge 0$ and a Catalan path $w \in \{0,1\}^{2l}$ such that $\alpha = w\texttt{1}(\texttt{0})^m$.
@@ -813,7 +813,7 @@ In the second equality, we combined terms using the fact that for $u \in U_{\alp
 %%%%%%%%%%%%%%
 %%  The matrix
 %%%%%%%%%%%%%%
-\subsection{\label{results} The Matrix and the Linear Transformation}
+\subsection{\label{results} The Matrix of the Linear Transformation}
 
 The process until now has focused on a single S-polynomial reduction $\overline{S(g_\alpha, y_k^2)}^{F_{\ell_1(\alpha)-1}} =\mathcal{S}_{\alpha, k} $ for a fixed $k$ and fixed $\alpha$. In this section, we examine all possible $\mathcal{S}_{\alpha, k_{j}}$, letting $k_j$ vary while keeping $\alpha$ fixed. Also, since $\alpha$ has $\ell_1(\alpha)$ entries equal to 1, we have $U_{\alpha, 1}=\big\{u(\alpha,k_i)\big| 1\le i\le \ell_1(\alpha)\big\}$ with  $|U_{\alpha,1}| = \ell_1(\alpha)$. Let
    $$A_\alpha = \ \  \Big[ \text{Coefficient of } y^{u(\alpha, k_i)}y_{d+1}y_{d+2} \text{ in } \mathcal{S}_{\alpha,k_j} \Big]_{1 \leq i,j \leq l+1}$$
