@@ -1,6 +1,6 @@
 #  Catalan-Path-Ideal
 
-A paper about the Gröbner basis of an Catalan path ideal.
+A paper about the Gröbner basis of a Catalan path ideal.
 
 proof.tex: the paper source is on TeX
 
