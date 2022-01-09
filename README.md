@@ -2,7 +2,7 @@
 
 A paper about the Gröbner basis of a Catalan path ideal.
 
-Authors: Nantel Bergeron, Xavier Mootoo
+Authors: Nantel Bergeron, Xavier Mootoo, Vedarth Vyas
 
 proof.tex: the paper source is on TeX
 
