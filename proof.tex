@@ -166,7 +166,7 @@ $    I = \la y_1 + y_2 + \dots + y_n, y^2_1, y^2_2, \dots , y^2_n \ra \subseteq 
 We show that the graded quotient $N = R /I$ has the Hilbert series given by 
 $$H_N(q)=\sum_{k=0}^{\lfloor \frac{n}{2} \rfloor } f^{(n-k,k)}q^k\,,$$
  where $f^{(n-k,k)}$ is the number of standard Young tableaux of shape $(n-k,k)$, equivalently, the dimension of the irreducible symmetric group indexed by that shape. 
- These numbers are related to paths that remain above the diagonal such as Catalan paths (see Definition~\ref{catalan_path}).
+ These numbers are related to paths that remain above the diagonal, such as Catalan paths (see Definition~\ref{catalan_path}).
  We then show that $N$ is indeed a symmetric group module and
 its irreducible representation decomposition is as expected (see Section~\ref{sec:irreducible}). This problem was suggested to us by John Machacek~\cite{M}.
 This ideal is one among a family of ideals related to those which are studied extensively in \cite{HRS}, and was motivated as a commutative version of the exterior portion of the super-space quotient defined in \cite{Z}. Our main goal is to find the Gr\"obner basis explicitly for the ideal described above.  
@@ -196,7 +196,7 @@ We span \S\ref{proof} to construct the Gr\"obner basis and in \S\ref{sec:irreduc
 In the following section, we introduce notation and definitions relevant to the construction of the Gr\"obner basis.
 % Bitstring
 \begin{definition}
-	For $\alpha = (\alpha_1, \dots, \alpha_n) \in \Z_{\geq 0}^n$ we denote a monomial $y^\alpha = y_1^{\alpha_1} \cdots y_n^{\alpha_n}\in \field[y_1, \dots, y_n]$. 
+	For $\alpha = (\alpha_1, \dots, \alpha_n) \in \Z_{\geq 0}^n$, we denote a monomial $y^\alpha = y_1^{\alpha_1} \cdots y_n^{\alpha_n}\in \field[y_1, \dots, y_n]$. 
 	For any square free monomial $y^\alpha$, we call the $\{0,1\}$--sequence $\alpha$, the {\bf bitstring} of the monomial. We often remove comas and parenthesis to represent $\alpha$.
 \end{definition}
 % Catalan path
@@ -205,8 +205,8 @@ In the following section, we introduce notation and definitions relevant to the 
 \end{definition}
 %  Northeast path Remark
 \begin{remark}\label{rem:path}
-	   An arbitrary Northeast path corresponds to a bit string $\alpha \in \{0, 1 \}^n$, where $\alpha_i = 0$ indicates  the $i^{th}$ step is North, and $\alpha_j = 1$ indicates the $j^{th}$ step 
-	   is East. We say that $\alpha$ is a path of length $n$. We have the following correspondence:
+	   An arbitrary northeast path corresponds to a bit string $\alpha \in \{0, 1 \}^n$, where $\alpha_i = 0$ indicates  the $i^{th}$ step is north, and $\alpha_j = 1$ indicates the $j^{th}$ step 
+	   is east. We say that $\alpha$ is a path of length $n$. We have the following correspondence:
 	   \begin{center}
 		Square-Free Monomial \quad$\iff$\quad Bitstring \quad$\iff$\quad Path.
 	   \end{center}
@@ -249,7 +249,7 @@ Theorem~\ref{main_theorem} is our main theorem. To prove it, we decompose the Bu
 \end{definition}
 % Definition length (and 1-0 length)
 \begin{definition}  \label{pathlength}
-	For a sequence $\alpha \in \{0,1\}^n$ we say that $\ell(\alpha)=n$ is the {\bf length} of $\alpha$. The number of  $0$ entries and the number of $1$ entries in $\alpha$ are denoted $	\ell_0(\alpha)$ and $\ell_1(\alpha)$, respectively. Remark that $\ell_1(\alpha)$ is the degree of the corresponding monomial $y^{\alpha}$. Moreover, if $\alpha= w\texttt{1}(\texttt{0})^m$ is an MCP, then 
+	For a sequence $\alpha \in \{0,1\}^n$, we say that $\ell(\alpha)=n$ is the {\bf length} of $\alpha$. The number of  $0$ entries and the number of $1$ entries in $\alpha$ are denoted $	\ell_0(\alpha)$ and $\ell_1(\alpha)$, respectively. Remark that $\ell_1(\alpha)$ is the degree of the corresponding monomial $y^{\alpha}$. Moreover, if $\alpha= w\texttt{1}(\texttt{0})^m$ is an MCP, then 
 	$d = \ell(w)+1 =2\ell_1(\alpha)-1$ is the position of the last entry $1$ in $\alpha$.
 \end{definition} 
 % definition P_alpha
@@ -262,7 +262,7 @@ Theorem~\ref{main_theorem} is our main theorem. To prove it, we decompose the Bu
 \end{definition}
 % Remark leading term
 \begin{remark}\label{rem:lex}
-	Note that $\alpha >_{lex} \beta$ for all  $ \beta \in P_{\alpha}$. Hence, the polynomial $g_\alpha$ in Equation~\eqref{main_theorem_eqn} has leading term given by $y^\alpha$.
+	Note that $\alpha >_{lex} \beta$, for all  $ \beta \in P_{\alpha}$. Hence, the polynomial $g_\alpha$ in Equation~\eqref{main_theorem_eqn} has leading term given by $y^\alpha$.
 \end{remark}
 % P_\alpha^(k)
 \begin{definition} \label{p_alpha_k}
@@ -481,7 +481,7 @@ The subsets $P_{u, \alpha}$ are disjoint, so we can partition $P_\alpha = \bigcu
 	\sum_{\beta \in P_\alpha} y^ \beta   = \sum_{r=1}^{\ell_1(\alpha)} \sum_{u \in U_{\alpha,r}} y^u
 										\sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}   \,.
 \end{equation} 
-We remark that for $\beta\in P_{u, \alpha}$ the only restriction on $\beta_{d+1}\cdots\beta_n$ is that $\ell_1(\beta_{d+1}\cdots\beta_n)=\ell_1(\beta)-\ell_1(u)=r$.
+We remark that for $\beta\in P_{u, \alpha}$, the only restriction on $\beta_{d+1}\cdots\beta_n$ is that $\ell_1(\beta_{d+1}\cdots\beta_n)=\ell_1(\beta)-\ell_1(u)=r$.
 Hence, in the last  summation in Equation~\eqref{y_beta_sum},  we are summing over all square-free monomials of degree $r$ in the variables $y_{d+1},\dots,y_n$.
 
 %\begin{definition}[$U^{(k)}_{\alpha,r}$] \label{u_alpha_k}
@@ -651,9 +651,9 @@ All such paths clearly remain above the diagonal and no further divisions using 
 %%%%%%%%%%%%%%
 \subsection{Division of $r>1$ terms in Equation~\eqref{spoly_lemma_eqn2} by $F_{\ell_1(\alpha)-1}$} \label{beta_redu}
 We now focus on the  $r>1$ terms in Equation~\eqref{spoly_lemma_eqn2}. 
-Fix $r>1$ and fix $u \in U_{\alpha, r}$ such that $u_k=0$. We are considering monomial of the form 
+Fix $r>1$ and fix $u \in U_{\alpha, r}$ such that $u_k=0$. We are considering a monomial of the form 
 $y^{u}y_k y_{i_1} \cdots y_{i_{r}}  $, where $d+1 \leq i_1 < \cdots < i_r \leq n$.
-Note that $\alpha_k = 1$ and $u_k =0$, and there is at least one more entry such that $\alpha_j = 1$ and $u_j = 0$ for $j \ne k$. Hence, there are \textit{at least} two entries in which $u$ differs from $\alpha$. We further split $r>1$ terms into two cases, where $r=2$ or $r>2$.
+Note that $\alpha_k = 1$ and $u_k =0$, and there is at least one more entry such that $\alpha_j = 1$ and $u_j = 0$, for $j \ne k$. Hence, there are \textit{at least} two entries in which $u$ differs from $\alpha$. We further split $r>1$ terms into two cases, where $r=2$ or $r>2$.
 We visualize this in Figure~\ref{Fig:case2}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Figure of cases r>1
@@ -815,7 +815,7 @@ In the second equality, we combined terms using the fact that for $u \in U_{\alp
 %%%%%%%%%%%%%%
 \subsection{\label{results} The Matrix of the Linear Transformation}
 
-The process until now has focused on a single S-polynomial reduction $\overline{S(g_\alpha, y_k^2)}^{F_{\ell_1(\alpha)-1}} =\mathcal{S}_{\alpha, k} $ for a fixed $k$ and fixed $\alpha$. In this section, we examine all possible $\mathcal{S}_{\alpha, k_{j}}$, letting $k_j$ vary while keeping $\alpha$ fixed. Also, since $\alpha$ has $\ell_1(\alpha)$ entries equal to 1, we have $U_{\alpha, 1}=\big\{u(\alpha,k_i)\big| 1\le i\le \ell_1(\alpha)\big\}$ with  $|U_{\alpha,1}| = \ell_1(\alpha)$. Let
+The process until now has focused on a single S-polynomial reduction $\overline{S(g_\alpha, y_k^2)}^{F_{\ell_1(\alpha)-1}} =\mathcal{S}_{\alpha, k} $, for a fixed $k$ and fixed $\alpha$. In this section, we examine all possible $\mathcal{S}_{\alpha, k_{j}}$, letting $k_j$ vary while keeping $\alpha$ fixed. Also, since $\alpha$ has $\ell_1(\alpha)$ entries equal to 1, we have $U_{\alpha, 1}=\big\{u(\alpha,k_i)\big| 1\le i\le \ell_1(\alpha)\big\}$ with  $|U_{\alpha,1}| = \ell_1(\alpha)$. Let
    $$A_\alpha = \ \  \Big[ \text{Coefficient of } y^{u(\alpha, k_i)}y_{d+1}y_{d+2} \text{ in } \mathcal{S}_{\alpha,k_j} \Big]_{1 \leq i,j \leq l+1}$$
 When $r=2$ in Equation~\eqref{eq:sreduction2} we readily see that we have $-2$ in the diagonal of $A_\alpha$ and $-1$ off the  diagonal. 
 This matrix is invertible, given explicitly by
@@ -830,8 +830,8 @@ Since $A_\alpha$ is invertible, we have that $\{\mathcal{S}_{\alpha, k_i}\}_{1 \
 \begin{equation} \label{lemma_phi_map2}
     \blue{\phi} (\mathcal{S}_{\alpha, k_i}) = \sum_{j=1}^{\ell_1(\alpha)} c_{ij} \mathcal{S}_{\alpha, {k_{j}}},
 \end{equation}
-where $M_\alpha=[c_{ij}]$. This is the linear transformation we require in  Lemma~\ref{lemma_phi_map}. To conclude the proof, we need to show that  $\phi(\mathcal{S}_{\alpha, k_i})  = g_{\alpha^{(k_i)}}$. To compute this, we substitute Equation~\eqref{eq:sreduction2} in~\eqref{lemma_phi_map2} for each $k_j$. When $r=2$ and fixed $d+2 \leq i_1 < i_2 \leq n$, then the coefficient of 
-$y^{u(\alpha, k_i)} y_{i_1} y_{i_2}$ in the expansion on $\mathcal{S}_{\alpha, k_i}$ is exactly the matrix $A_\alpha$. Therefore, when we make the linear combination using $M_\alpha$ (the  inverse of $A_\alpha$), we get
+where $M_\alpha=[c_{ij}]$. This is the linear transformation we require in  Lemma~\ref{lemma_phi_map}. To conclude the proof, we need to show that  $\blue{\phi}(\mathcal{S}_{\alpha, k_i})  = g_{\alpha^{(k_i)}}$. To compute this, we substitute Equation~\eqref{eq:sreduction2} in~\eqref{lemma_phi_map2} for each $k_j$. When $r=2$ and fixed $d+2 \leq i_1 < i_2 \leq n$, then the coefficient of 
+$y^{u(\alpha, k_i)} y_{i_1} y_{i_2}$ in the expansion on $\mathcal{S}_{\alpha, k_i}$, is exactly the matrix $A_\alpha$. Therefore, when we make the linear combination using $M_\alpha$ (the  inverse of $A_\alpha$), we get
 \begin{equation}\label{eq:coefr=2}
   \text{Coeff  of } y^{u(\alpha, k_{i'})} y_{i_1} y_{i_2} \text{ in  } \blue{\phi} (\mathcal{S}_{\alpha, k_{i}})  = 
   \begin{cases}
@@ -839,7 +839,7 @@ $y^{u(\alpha, k_i)} y_{i_1} y_{i_2}$ in the expansion on $\mathcal{S}_{\alpha, k
 	0& \text{otherwise.}
   \end{cases}
   \end{equation}
-For the other terms, fix $r, v$ and $d+1 \leq i_1 < \cdots < i_r \leq n$ such that $3 \leq r \leq \ell_1(\alpha)+1$ and  $v \in U_{\alpha,r-1}$.
+For the other terms, fix $r, v$ and $d+1 \leq i_1 < \cdots < i_r \leq n$, such that $3 \leq r \leq \ell_1(\alpha)+1$ and  $v \in U_{\alpha,r-1}$.
 We want to determine the coefficient of $y^{v} y_{i_1} \cdots y_{i_{r}}$ in $\blue{\phi} (\mathcal{S}_{\alpha, k_{i}}) $. This will depend on the value of $v_{k_i}$.
 
 %%%%%%%%%%%%%%%%
@@ -878,7 +878,7 @@ Using Equation~\eqref{y_beta_sum},
 	g_{\alpha^{(k_i)}} = y^{{\alpha^{(k_i)}}}+  \sum_{s=1}^{\ell_1(\alpha^{(k_i)})} \sum_{u \in U_{\alpha^{(k_i)},s}} y^u
 										\sum_{d+3 \leq i_1 < \cdots < i_s \leq n} y_{i_1} \cdots y_{i_{s}}. 
 \end{equation}
-Note that $\ell_1(\alpha^{(k_i)})=\ell_1(\alpha)+1$ and for any $u \in U_{\alpha^{(k_i)},s}$ we must have $u_{k_i}=0$ since $\alpha^{(k_i)}_{k_i}=0$. For any other position $1\le k\le d$, we have $\alpha_k=\alpha_k^{(k_i)}$. Hence, $\alpha_k=0 \implies u_k=0 \implies v_k=0$, for any  $v\in U_{\alpha,r-1}$. For $k=d+1$ or $k=d+2$, there are no constraints on $u$ as $\alpha_{d+1}^{(k_i)}=\alpha_{d+2}^{(k_i)}=1$. Moreover, the term $ y^{{\alpha^{(k_i)}}}=y^{u(\alpha, k_i)}y_{d+1}y_{d+2}$ appears in the first sum of Equation~\eqref{phi_out1}.
+Note that $\ell_1(\alpha^{(k_i)})=\ell_1(\alpha)+1$ and for any $u \in U_{\alpha^{(k_i)},s}$ we must have $u_{k_i}=0$, since $\alpha^{(k_i)}_{k_i}=0$. For any other position $1\le k\le d$, we have $\alpha_k=\alpha_k^{(k_i)}$. Hence, $\alpha_k=0 \implies u_k=0 \implies v_k=0$, for any  $v\in U_{\alpha,r-1}$. For $k=d+1$ or $k=d+2$, there are no constraints on $u$ as $\alpha_{d+1}^{(k_i)}=\alpha_{d+2}^{(k_i)}=1$. Moreover, the term $ y^{{\alpha^{(k_i)}}}=y^{u(\alpha, k_i)}y_{d+1}y_{d+2}$ appears in the first sum of Equation~\eqref{phi_out1}.
 This shows that every term in Equation~\eqref{gin} appears in Equation~\eqref{phi_out1}.
 
 For the converse, note that any term $y^{u(\alpha, k_i)} y_{i_1} y_{i_2}$  for $d+1 \leq i_1 < i_2 \leq  n$, corresponds to 
@@ -899,7 +899,7 @@ This shows the reverse inclusion and concludes our proof of
 %%  Terminating the algorithm
 %%%%%%%%%%%%%%
 \subsection{\label{property_c}Termination of Buchberger's Algorithm}
-In the previous subsections, we computed the set of remainders  of S-polynomials $\overline{S(g_\alpha, k_1)}^{F_{\ell_1(\alpha)-1}}, \dots, \overline{S(g_\alpha, k_{\ell_1(\alpha)})}^{F_{\ell_1(\alpha)-1}}$ and used Lemma~\ref{lemma_phi_map} to conclude that $\{g_{\alpha^{(k_i)}}\}_{1\le i\le \ell_1(\alpha)}$ is obtained as an intermediate step in the Buchberger's Algorithm. If $\ell_1(\alpha)-1<\ell$, then these polynomials are already in $F_\ell$ so the division with respect to $F_\ell$ will be zero (no new polynomials). For $\ell_1(\alpha)-1=\ell$, we will obtain a new polynomial and construct $F_{\ell+1}$ in this way, as long as $\ell_1(\alpha)-1 \le \Floor{\frac{n-1}{2}}-1$.
+In the previous subsections, we computed the set of remainders  of S-polynomials $\overline{S(g_\alpha, k_1)}^{F_{\ell_1(\alpha)-1}}, \dots, \overline{S(g_\alpha, k_{\ell_1(\alpha)})}^{F_{\ell_1(\alpha)-1}}$ and used Lemma~\ref{lemma_phi_map} to conclude that, $\{g_{\alpha^{(k_i)}}\}_{1\le i\le \ell_1(\alpha)}$ is obtained as an intermediate step in the Buchberger's Algorithm. If $\ell_1(\alpha)-1<\ell$, then these polynomials are already in $F_\ell$ so the division with respect to $F_\ell$ will be zero (no new polynomials). For $\ell_1(\alpha)-1=\ell$, we will obtain a new polynomial and construct $F_{\ell+1}$ in this way, as long as $\ell_1(\alpha)-1 \le \Floor{\frac{n-1}{2}}-1$.
 We need to show that for $\ell = \lfloor \frac{n-1}{2} \rfloor$, the set $F_\ell$ is the reduced Gr\"obner basis.
 The next lemma shows that the set
 \begin{equation} \label{Eq:basis1}
@@ -916,8 +916,8 @@ From this we will conclude that $B$ is a basis, and therefore $F_\ell$ is the fu
 \begin{proof}
 If $y^\delta$ is not square free, then it is divisible by $y_k^2$ for some $k$ and we get $\overline{y^\delta}^{F_\ell}=0$. 
 If $y^\delta$ crosses the diagonal, 
-let $k$ be the smallest integer such that $\alpha=\delta_1\delta_2\cdots\delta_k \texttt{0}^{n-k}$ 
-crosses under the diagonal. It is clear that $\alpha$ is MCP and $\ell_1(\alpha)-1\le \ell$, hence $g_\alpha\in F_\ell$. Since we have $y^\delta=y^\alpha y^\epsilon$, we obtain
+let $k$ be the smallest integer such that, $\alpha=\delta_1\delta_2\cdots\delta_k \texttt{0}^{n-k}$ 
+crosses under the diagonal. It is clear that $\alpha$ is a MCP and $\ell_1(\alpha)-1\le \ell$, hence $g_\alpha\in F_\ell$. Since we have $y^\delta=y^\alpha y^\epsilon$, we obtain
 \begin{equation}\label{eq:contra}
 	\overline{y^\delta}^{F_\ell}=\overline{y^\alpha y^\epsilon}^{F_\ell}=\overline{-\sum_{\beta\in P_\alpha}y^\beta y^\epsilon}^{F_\ell}.
 \end{equation}
@@ -962,7 +962,7 @@ A wonderful lemma (a consequence of Taylor expansion) gives us the following.
 %%%%%%%%%%
 \subsection{Standard Young Tableaux }\label{ss:standardYoung}
 To define elements in $H$, we need to introduce the notion of Standard Young Tableaux. This will also be useful  for the
-representation theory of the symmetric group aspect of our investigation. We shall also see that the set $B$ in in Equation~\eqref{Eq:basis1} is related to some standard Young tableaux.  
+representation theory of the symmetric group aspect of our investigation. We shall also see that the set $B$ in Equation~\eqref{Eq:basis1} is related to some standard Young tableaux.  
 \begin{definition} Given a sequence of integers $\lambda=(\lambda_1,\lambda_2,\ldots,\lambda_r)$  such that $\lambda_1\ge \lambda_2\ge\cdots\ge\lambda_r >0$ and $n=\lambda_1+\cdots+\lambda_r$, we construct the set 
   $$D_\lambda=\big\{ (i,j)\in \Z\times\Z \big|  1\le j \le r;\ 1\le i \le \lambda_j \big\}\,.$$
 We say that $\lambda$ is an {\bf partition} of $n$ and $D_\lambda$ is the {\bf diagram} of $\lambda$. A bijection
@@ -1003,7 +1003,7 @@ For $k\le \lfloor \frac{n}{2} \rfloor$, let $\lambda=(n-k,k)$.  The number $f^\l
 \end{proposition}
 
 \begin{proof}
-This is a very classical result and some version of it can be found in~\cite{Stanley}. The bijection $T\mapsto y^\gamma$ for $T\in SYT_\lambda$ is  given by $\gamma_i=0$ if $i$ lies in the first row of $T$, otherwise $\gamma_i=1$. One then checks that staying above the diagonal is equivalent to the inequalities defining standard  Young tableaux.
+This is a very classical result and some version of it can be found in~\cite{Stanley}. The bijection $T\mapsto y^\gamma$ for $T\in SYT_\lambda$ is  given by $\gamma_i=0$, if $i$ lies in the first row of $T$, otherwise $\gamma_i=1$. One then checks that staying above the diagonal is equivalent to the inequalities defining standard  Young tableaux.
 \end{proof}
 
 In the proof above, let us denote by  $y^T$ the monomial we obtain from $T$. We thus have that $B$ in  Equation~\eqref{Eq:basis1} is also given by the following disjoint union
@@ -1024,7 +1024,7 @@ Fix $k\le \lfloor \frac{n}{2} \rfloor$ and let $\lambda=(n-k,k)$. Given $T\in SY
   Here, we only define $G_T$ for shape $\lambda$ with two parts, but it can be done for any shape using Vandermonde polynomials for each column of $T$. 
   These are  the polynomials originally  defined by Specht~\cite{Specht} to construct irreducible representations of $S_n$.
 \begin{example}
-  Let $T$ be as in Example~\ref{ex:tab}, we have $G_T=(y_1-y_3)(y_2-y_6)(y_4-y_8)$
+  Let $T$ be as in Example~\ref{ex:tab}, we have $G_T=(y_1-y_3)(y_2-y_6)(y_4-y_8)$.
 \end{example}
 Let
 \begin{equation}\label{Eq:B2inT}
@@ -1036,8 +1036,8 @@ Let
 \end{theorem}
 \begin{proof}
  For the inclusion, using Lemma~\ref{lem:ortho}, we need to show that for $G_T\in B'$ we have
-   $$P\big({\textstyle \frac{ \partial}{ \partial y_1},\ldots,\frac{ \partial}{ \partial y_n}}\big) G_T =0 $$
-   for all generators $P$ of $I$. If $P=y_k^2$, then clearly this results in zero since $G_T$ is linear in any single variable (square free).
+   $$P\big({\textstyle \frac{ \partial}{ \partial y_1},\ldots,\frac{ \partial}{ \partial y_n}}\big) G_T =0, $$
+   for all generators $P$ of $I$. If $P=y_k^2$, then clearly this results in zero, since $G_T$ is linear in any single variable (square free).
    For $P=y_1+y_2+\cdots+y_n$, we use the product rule and reduce to the case
    $$\big({\textstyle \frac{ \partial}{ \partial y_1}+ \frac{ \partial}{ \partial y_2}+\cdots+\frac{ \partial}{ \partial y_n}}\big) (y_i-y_j)=0,$$
    for all $i,j$.
@@ -1078,9 +1078,9 @@ Considering the disjoint decomposition of the basis $B$ in  Equation~\eqref{Eq:B
 %%%%%%%%%%
 \subsection{Irreducible graded decomposition of $R/I$}\label{ss:irreducible}
 The symmetric group $S_n=\big\{ \sigma \big| \sigma\colon \{1,\ldots n\}\to\{1,\ldots,n\}\text{ bijection}\big\}$ acts on polynomials in $R$ with 
-$\sigma P(y_1,\ldots,y_n)=P(y_{\sigma(1)},\ldots,y_{\sigma(n)})$. The generators of the ideal $I$ are mapped to the other generators of $I$ under this action. Hence, the ideal $I$ is invariant under the action of $S_n$. We can thus have a well-defined $\field$-linear action of $S_n$ on the quotient $N=R/I$. In fact, since the  action preserves degree, we have an action of $S_n$ on each graded piece $N^{(k)}$ and we are interested in describing the decomposition of that action in terms of the irreducible representation. For more details on the representation of the symmetric group see  \cite{Sagan}. For our needs, the irreducible representation of the symmetric group can be nicely constructed directly in the space of polynomials. We can construct such a representation using Specht polynomials~\cite{Specht}, which we introduced in \S\ref{ss:specht}.
+$\sigma P(y_1,\ldots,y_n)=P(y_{\sigma(1)},\ldots,y_{\sigma(n)})$. The generators of the ideal $I$ are mapped to the other generators of $I$ under this action. Hence, the ideal $I$ is invariant under the action of $S_n$. We can thus have a well-defined $\field$-linear action of $S_n$ on the quotient $N=R/I$. In fact, since the  action preserves degree, we have an action of $S_n$ on each graded piece $N^{(k)}$. Additionally, we are interested in describing the decomposition of that action in terms of the irreducible representation. For more details on the representation of the symmetric group see  \cite{Sagan}. For our needs, the irreducible representation of the symmetric group can be nicely constructed directly in the space of polynomials. We can construct such a representation using Specht polynomials~\cite{Specht}, which we introduced in \S\ref{ss:specht}.
 
-It is known~\cite{Sagan,Specht} that for a fixed shape $\lambda$ the set 
+It is known~\cite{Sagan,Specht} that for a fixed shape $\lambda$, the set 
 \begin{equation}\label{eq:garnir}
  \big\{G_T\big| T \in SYT_\lambda\big\}
  \end{equation}
@@ -1090,8 +1090,8 @@ Considering the disjoint decomposition of the basis $B'$ in  Equation~\eqref{Eq:
 \begin{theorem}
     For $k\le \lfloor \frac{n}{2} \rfloor$, we have that Equation~\eqref{eq:garnir} is a basis of $N^{(k)}$. In particular, $N^{(k)}$ is an irreducible representation of $S_n$
     indexed by $\lambda=(n-k,k)$. We can thus write
-    $$ Frob_q(R/I) \sum_{k=0}^{ \lfloor \frac{n}{2} \rfloor} s_{(n-k,k)} q^k$$
-    where $s_\lambda$  is the Schur function used to encode the irreducible representation of $S_n$ and $Frob_q$ is the graded Frobenius map, which maps the representation to symmetric functions (see~\cite{Sagan,Macdonald}).
+    $$ Frob_q(R/I) \sum_{k=0}^{ \lfloor \frac{n}{2} \rfloor} s_{(n-k,k)} q^k,$$
+    where $s_\lambda$  is the Schur function used to encode the irreducible representation of $S_n$. Additionally, $Frob_q$ is the graded Frobenius map, which maps the representation to symmetric functions (see~\cite{Sagan,Macdonald}).
 \end{theorem}
 
 
