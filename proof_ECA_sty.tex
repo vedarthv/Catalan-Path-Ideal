@@ -64,7 +64,7 @@
 \usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
 \fancypagestyle{mypagestyle}{%
   \fancyhf{}% Clear header/footer
-  \fancyhead[OC]{Nantel Bergeron and Xavier Mootoo}% Author on Odd page, Centred
+  \fancyhead[OC]{Nantel Bergeron, Xavier Mootoo and Vedarth Vyas}% Author on Odd page, Centred
   \fancyfoot[C]{{\it ECA}  {\bf x:x} (xxxx) Article \#SxRx\hfill\arabic{page}}%
   \renewcommand{\headrulewidth}{.4pt}% Header rule of .4pt
 }
@@ -76,124 +76,7 @@
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{angles,quotes,shapes.misc}
 
-\usepackage{filecontents}
-\begin{filecontents}{\jobname.bib}
 
-@book{iva,
-    AUTHOR = {Cox, David and Little, John and O'Shea, Donal},
-     TITLE = {Ideals, varieties, and algorithms},
-    SERIES = {Undergraduate Texts in Mathematics},
-   EDITION = {Second},
-      NOTE = {An introduction to computational algebraic geometry and
-              commutative algebra},
- PUBLISHER = {Springer-Verlag, New York},
-      YEAR = {1997},
-     PAGES = {xiv+536},
-      ISBN = {0-387-94680-2},
-   MRCLASS = {13P10 (13-01 14-01 14Qxx 68Q40)},
-  MRNUMBER = {1417938},
-} 
-
-  @article {HRS,
-	  AUTHOR = {Haglund, James and Rhoades, Brendon and Shimozono, Mark},
-	   TITLE = {{Ordered set partitions, generalized coinvariant algebras, and the Delta Conjecture}},
-	 JOURNAL = {Adv. Math.},
-	FJOURNAL = {Advances in Mathematics},
-	  VOLUME = {329},
-		YEAR = {2018},
-	   PAGES = {851--915},
-		ISSN = {0001-8708},
-		 DOI = {10.1016/j.aim.2018.01.028},
-		 URL = {https://doi-org.ezproxy.library.yorku.ca/10.1016/j.aim.2018.01.028},
-  }
-  
-  @article {Specht,
-	  AUTHOR = {Specht, W.},
-	   TITLE = {{Die irreduziblen Darstellungen der symmetrischen Gruppe}},
-	 JOURNAL = {Math Z.},
-	  VOLUME = {39},
-		YEAR = {1935},
-	   PAGES = {696--711},
-  }
-	  
-  @unpublished{M,
-   AUTHOR = { Machacek, John },
-  TITLE = {Personal communication},
-  YEAR = {2019},
-  }
-  
-  @unpublished{Z,
-   AUTHOR = {Zabrocki, Mike},
-  TITLE = {{A module for the Delta conjecture}},
-  YEAR = {2019},
-  NOTE={arXiv:1902.08966},
-  }
-  
-  @unpublished{ESS,
-   AUTHOR = {Engstr\"om, Alexander  and Sanyal, Raman and  Stump, Christian},
-  TITLE = {{Standard complexes of matroids and lattice paths}},
-  YEAR = {2019},
-  NOTE={arXiv:1911.12290},
-  }
-  
-  @book {Sagan,
-	  AUTHOR = {Sagan, Bruce E.},
-	   TITLE = {{The symmetric group}},
-	  SERIES = {Graduate Texts in Mathematics},
-	  VOLUME = {203},
-	 EDITION = {Second},
-		NOTE = {Representations, combinatorial algorithms, and symmetric
-				functions},
-   PUBLISHER = {Springer-Verlag, New York},
-		YEAR = {2001},
-	   PAGES = {xvi+238},
-		ISBN = {0-387-95067-2},
-	 MRCLASS = {05E10 (05E05 20C30)},
-	MRNUMBER = {1824028},
-		 DOI = {10.1007/978-1-4757-6804-6},
-		 URL = {https://doi-org.ezproxy.library.yorku.ca/10.1007/978-1-4757-6804-6},
-  }
-  
-  @book {Stanley,
-	  AUTHOR = {Stanley, Richard P.},
-	   TITLE = {Catalan numbers},
-   PUBLISHER = {Cambridge University Press, New York},
-		YEAR = {2015},
-	   PAGES = {viii+215},
-		ISBN = {978-1-107-42774-7; 978-1-107-07509-2},
-	 MRCLASS = {05-01 (01A05 11B75 11B83)},
-	MRNUMBER = {3467982},
-  MRREVIEWER = {David Callan},
-		 DOI = {10.1017/CBO9781139871495},
-		 URL = {https://doi-org.ezproxy.library.yorku.ca/10.1017/CBO9781139871495},
-  }
-  
-  @book {Macdonald,
-	  AUTHOR = {Macdonald, I. G.},
-	   TITLE = {Symmetric functions and {H}all polynomials},
-	  SERIES = {Oxford Mathematical Monographs},
-	 EDITION = {Second},
-		NOTE = {With contributions by A. Zelevinsky,
-				Oxford Science Publications},
-   PUBLISHER = {The Clarendon Press, Oxford University Press, New York},
-		YEAR = {1995},
-	   PAGES = {x+475},
-		ISBN = {0-19-853489-2},
-  }
-  
-  @book {Macaulay,
-	  AUTHOR = {Macaulay, F. S.},
-	   TITLE = {The algebraic theory of modular systems},
-	  SERIES = {Cambridge Mathematical Library},
-		NOTE = {Revised reprint of the 1916 original,
-				With an introduction by Paul Roberts},
-   PUBLISHER = {Cambridge University Press, Cambridge},
-		YEAR = {1994},
-	   PAGES = {xxxii+112},
-		ISBN = {0-521-45562-6},
-  }
-
-\end{filecontents}
 
 \titleformat{\section}[block]
 {\normalfont\fontsize{16}{20}\bfseries}
@@ -263,7 +146,7 @@
 Nantel Bergeron$^\dag$, Xavier Mootoo$^\ddag$ and Vedarth Vyas$^*$\\[20pt]
 
 \footnotesize {\it Department of Mathematics and Statistics, York  University, Toronto, Ontario M3J 1P3, CANADA.\\
-$^\dag$ Email: bergeron@mathstat.yorku.ca\\
+$^\dag$ Email: bergeron@yorku.ca\\
 $^\ddag$ Email: xmootoo@gmail.com\\
 $^*$ Email: vvyas@my.yorku.ca}\\[10pt]
 
@@ -1236,10 +1119,63 @@ Considering the disjoint decomposition of the basis $B'$ in  Equation~\eqref{Eq:
     where $s_\lambda$  is the Schur function used to encode the irreducible representation of $S_n$. Additionally, $Frob_q$ is the graded Frobenius map, which maps the representation to symmetric functions (see~\cite{Sagan,Macdonald}).
 \end{theorem}
 
+%-------------------------------------------------------------------
+\begin{thebibliography}{20}
 
-\bibliographystyle{plain}
-\bibliography{\jobname.bib}
+\bibitem{iva}
+D. Cox, J. Little,  and D. O'Shea, 
+\emph {Ideals, varieties, and algorithms},
+Undergraduate Texts in Mathematics, Springer-Verlag, New York, (1997).
+
+\bibitem{ESS}
+A. Engstr\"om,   R. Sanyal and  C. Stump, 
+\emph {Standard complexes of matroids and lattice paths},
+arXiv:1911.12290 (2019).
+
+\bibitem{HRS}
+J. Haglund,  B.  Rhoades and  M. Shimozono, 
+\emph {Ordered set partitions, generalized coinvariant algebras, and the Delta Conjecture},
+Adv. Math. 329 (2018), 851--915.
+
+\bibitem{Macaulay}
+F. S. Macaulay, 
+\emph {The algebraic theory of modular systems},
+Cambridge Mathematical Library, Cambridge University Press, Cambridge, (1994).
+
+\bibitem{Macdonald}
+I. G. Macdonald, 
+\emph {Symmetric functions and {H}all polynomials},
+Oxford Mathematical Monographs, The Clarendon Press, Oxford University Press, New York (1995).
+
+\bibitem{M}
+J. Machacek, 
+\emph {Personal communication},
+(2019).
+
+\bibitem{Sagan}
+B. E. Sagan, 
+\emph {The symmetric group},
+Graduate Texts in Mathematics 203, Springer-Verlag, New York (2001).
+
+\bibitem{Specht}
+W. Specht, 
+\emph {Die irreduziblen Darstellungen der symmetrischen Gruppe},
+Math Z. 39 (1935), 696--711.
+
+\bibitem{Stanley}
+R. P. Stanley, 
+\emph {Catalan numbers},
+Cambridge University Press, New York, (2015).
+
+\bibitem{Z}
+M. Zabrocki, 
+\emph {A module for the Delta conjecture},
+arXiv:1902.08966 (2019).
+
+
+\end{thebibliography}
 
 \end{document}
+
 
 
