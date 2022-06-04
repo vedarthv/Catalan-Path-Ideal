@@ -193,7 +193,7 @@ This ideal is one among a family of ideals related to those which are studied ex
 	\begin{equation} \label{main_theorem_eqn}
 		g_{\alpha} = y^{\alpha} + \sum_{\beta \in P_{\alpha}} y^{\beta}
 	\end{equation}
-	Where $\alpha \in \{0,1\}^n$ is a Modified Catalan Path (see Definition~\ref{MCP}) and $P_\alpha$ is a set of paths weakly above $\alpha$ (see Definition~\ref{p_alpha}). \end{theorem}
+	Where $\alpha \in \{\textnormal{\texttt{0,1}}\}^n$ is a Modified Catalan Path (see Definition~\ref{MCP}) and $P_\alpha$ is a set of paths weakly above $\alpha$ (see Definition~\ref{p_alpha}). \end{theorem}
 The   paper is divided as follows. In \S\ref{background}  we introduce some definitions, notations and a loop version of our main theorem; namely Theorem~\ref{main_theorem2}. 
 We span \S\ref{proof} to construct the Gr\"obner basis and in \S\ref{sec:irreducible}, we will compute some independent elements in the orthogonal complement of $I$. A dimension argument will allow us to conclude that they form a basis of the quotient and that Theorem~\ref{main_theorem2} holds. As a byproduct, we show that each homogeneous component is of degree $k\le {\lfloor \frac{n}{2} \rfloor }$. It is in fact  an irreducible  symmetric group module indexed by the shape $(n-k,k)$.
 
@@ -215,7 +215,7 @@ In the following section, we introduce notation and definitions relevant to the 
 % Bitstring
 \begin{definition}
 	For $\alpha = (\alpha_1, \dots, \alpha_n) \in \Z_{\geq 0}^n$, we denote a monomial $y^\alpha = y_1^{\alpha_1} \cdots y_n^{\alpha_n}\in \field[y_1, \dots, y_n]$. 
-	For any square free monomial $y^\alpha$, we call the $\{0,1\}$--sequence $\alpha$, the {\bf bitstring} of the monomial. We often remove comas and parenthesis to represent $\alpha$.
+	For any square free monomial $y^\alpha$, we call the $\{\textnormal{\texttt{0,1}}\}$--sequence $\alpha$, the {\bf bitstring} of the monomial. We often remove commas and parenthesis to represent $\alpha$.
 \end{definition}
 % Catalan path
 \begin{definition} \label{catalan_path}
@@ -223,7 +223,7 @@ In the following section, we introduce notation and definitions relevant to the 
 \end{definition}
 %  Northeast path Remark
 \begin{remark}\label{rem:path}
-	   An arbitrary northeast path corresponds to a bit string $\alpha \in \{0, 1 \}^n$, where $\alpha_i = 0$ indicates  the $i^{th}$ step is north, and $\alpha_j = 1$ indicates the $j^{th}$ step 
+	   An arbitrary northeast path corresponds to a bit string $\alpha \in \{\textnormal{\texttt{0,1}} \}^n$, where $\alpha_i = \textnormal{\texttt{0}}$ indicates  the $i^{th}$ step is north, and $\alpha_j = \textnormal{\texttt{1}}$ indicates the $j^{th}$ step 
 	   is east. We say that $\alpha$ is a path of length $n$. We have the following correspondence:
 	   \begin{center}
 		Square-Free Monomial \quad$\iff$\quad Bitstring \quad$\iff$\quad Path.
@@ -232,7 +232,7 @@ In the following section, we introduce notation and definitions relevant to the 
 \end{remark}
 % Example bitstring,monomial,path
 \begin{example}
-		Consider the monomials $y_2y_4y_5, y_2y_4y_6 \in \field[y_1, \dots, y_6]$; their bitstring representations are \texttt{010110} and \texttt{010101} respectively. 
+		Consider the monomials $y_2y_4y_5, y_2y_4y_6 \in \field[y_1, \dots, y_6]$; their bitstring representations are \textnormal{\texttt{010110}} and \textnormal{\texttt{010101}} respectively. 
 		Their corresponding paths are respectively
 $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -262,19 +262,21 @@ For definitions and theorems pertaining to Gr\"obner basis theory, we follow \ci
 Theorem~\ref{main_theorem} is our main theorem. To prove it, we decompose the Buchberger's algorithm into loops. The division of S-polynomials produced in each loop is either the next generation of MCP polynomials  or has a zero remainder.
 % Definition MCP
 \begin{definition}  \label{MCP}
-	A sequence  $\alpha \in \{0,1\}^n$ is a {\bf Modified Catalan Path (MCP)} if there exists integers $l,m\ge 0$ and a Catalan path $w \in \{0,1\}^{2l}$ such that $\alpha = w\texttt{1}(\texttt{0})^m$.
-	Note that $\alpha$ is equivalent to a Catalan path with an additional East step after its final step. We let $d=2l+1$ denote the position of the last $1$ in $\alpha$.
+	A sequence  $\alpha \in \{\textnormal{\texttt{0,1}}\}^n$ is a {\bf Modified Catalan Path (MCP)} if there exists integers $l,m\ge 0$ and a Catalan path $w \in \{\textnormal{\texttt{0,1}}\}^{2l}$ such that $\alpha = w\textnormal{\texttt{1}}(\textnormal{\texttt{0}})^m$.
+	Note that $\alpha$ is equivalent to a Catalan path with an additional East step after its final step. We let $d=2l+1$ denote the position of the last $\textnormal{\texttt{1}}$ in $\alpha$.
 \end{definition}
 % Definition length (and 1-0 length)
 \begin{definition}  \label{pathlength}
-	For a sequence $\alpha \in \{0,1\}^n$, we say that $\ell(\alpha)=n$ is the {\bf length} of $\alpha$. The number of  $0$ entries and the number of $1$ entries in $\alpha$ are denoted $	\ell_0(\alpha)$ and $\ell_1(\alpha)$, respectively. Remark that $\ell_1(\alpha)$ is the degree of the corresponding monomial $y^{\alpha}$. Moreover, if $\alpha= w\texttt{1}(\texttt{0})^m$ is an MCP, then 
+	For a sequence $\alpha \in \{\textnormal{\texttt{0,1}}\}^n$, we say that $\ell(\alpha)=n$ is the {\bf length} of $\alpha$. The number of  $\textnormal{\texttt{0}}$ entries and the number of $\textnormal{\texttt{1}}$ entries in $\alpha$ are denoted $	\ell_0(\alpha)$ and $\ell_1(\alpha)$, respectively. Remark that $\ell_1(\alpha)$ is the degree of the corresponding monomial $y^{\alpha}$. Moreover, if 
+	$\alpha= w\textnormal{\texttt{1}}(\textnormal{\texttt{0}})^m$ is an MCP, then 
 	$d = \ell(w)+1 =2\ell_1(\alpha)-1$ is the position of the last entry $1$ in $\alpha$.
 \end{definition} 
 % definition P_alpha
 \begin{definition} \label{p_alpha}
 	For a fixed MCP $\alpha$, let $d=2\ell_1(\alpha)-1$. We define the set:
 	\begin{align*}
-		P_{\alpha} = \big\{ \beta \in \{0,1\}^n \big| \beta \neq \alpha,\  \ell_1(\beta)=\ell_1(\alpha) \text{ and } (\alpha_i = 0 \implies \beta_i = 0)_{1 \leq i \leq d}\big\}
+		P_{\alpha} = \big\{ \beta \in \{\textnormal{\texttt{0,1}}\}^n \big| \beta \neq \alpha,\  \ell_1(\beta)=\ell_1(\alpha) \text{ and } (\alpha_i = 
+		\textnormal{\texttt{0}} \implies \beta_i = \textnormal{\texttt{0}})_{1 \leq i \leq d}\big\}
 	\end{align*}
 	Thus, any $\beta \in P_\alpha$ will correspond to a northeast path that is weakly above $\alpha$ and ends in the same position as $\alpha$.
 \end{definition}
@@ -285,7 +287,7 @@ Theorem~\ref{main_theorem} is our main theorem. To prove it, we decompose the Bu
 % P_\alpha^(k)
 \begin{definition} \label{p_alpha_k}
 	For an integer $k \geq 1$ such that $\alpha_k=1$, let
-		$P_\alpha^{(k)} = \big\{\beta  \in P_\alpha \ | \ \beta_k = 0\big\}.$
+		$P_\alpha^{(k)} = \big\{\beta  \in P_\alpha \ | \ \beta_k = \textnormal{\texttt{0}}\big\}.$
 \end{definition}
 % Definition F_\ell
 \begin{definition} \label{F_ell}
@@ -314,19 +316,19 @@ Remark that $I\ne \la F_\ell \ra$ for $\ell\le 0$, hence, we first prove the fol
 	Fix an integer $n>0$. Then $I=\la F_1\ra$.
 \end{lemma}
 % proof
-\begin{proof} We have that $F_1 = \{g_1, g_{011}, y_2^2, \dots, y_n^2 \}$ where
+\begin{proof} We have that $F_{1} = \{g_\textnormal{\texttt{1}}, g_{\textnormal{\texttt{011}}}, y_2^2, \dots, y_n^2 \}$ where
  	\begin{align*}
- 		g_{1} &= y_1 + \sum_{\beta \in P_{1}} y^{\beta} = y_1 + y_2 + \dots + y_n \in I\\
- 		g_{011} &= y_2y_3 + \sum_{\beta \in P_{011}}y^\beta = \sum_{2 \leq i < j \leq n}y_iy_j 
+ 		g_{\textnormal{\texttt{1}}} &= y_1 + \sum_{\beta \in P_{1}} y^{\beta} = y_1 + y_2 + \dots + y_n \in I\\
+ 		g_{\textnormal{\texttt{011}}} &= y_2y_3 + \sum_{\beta \in P_{\textnormal{\texttt{011}}}}y^\beta = \sum_{2 \leq i < j \leq n}y_iy_j 
 	\end{align*}
-	To prove {$\la F_1 \ra \sube I $} we need only show that $g_{011} \in I$. Indeed, we have
-	$$  g_{011} = \frac{1}{2}(g_1^2 - (y_1^2 + \cdots +y_n^2)) - y_1g_1 + y_1^2  \in I\,.$$
-	Conversely, we have   $ y_1^2 =(y_2^2 + \cdots +y_n^2) -g_1^2  + 2(y_1g_1 + g_{011}) \in \la F_1 \ra$.
+	To prove {$\la F_1 \ra \sube I $} we need only show that $g_{\textnormal{\texttt{011}}} \in I$. Indeed, we have
+	$$  g_{\textnormal{\texttt{011}}} = \frac{1}{2}(g_1^2 - (y_1^2 + \cdots +y_n^2)) - y_1g_\textnormal{\texttt{1}} + y_1^2  \in I\,.$$
+	Conversely, we have   $ y_1^2 =(y_2^2 + \cdots +y_n^2) -g_\textnormal{\texttt{1}}^2  + 2(y_1g_\textnormal{\texttt{1}} + g_{\textnormal{\texttt{011}}}) \in \la F_1 \ra$.
 \end{proof}
 
 Now that this is established, we want to  show that the division algorithm with respect to certain S-polynomials of $F_\ell$ will produce $F_{\ell+1}$.
 The next lemma will be very useful for this.
-For $g_\alpha\in F_\ell$, we compute {\sl only} the S-polynomials of $g_\alpha$ and $y_j^2\in F_\ell$ for all $j$ such that $\alpha_j=1$, and divide each such S-polynomial by $F_{\ell_1(\alpha)-1}$.
+For $g_\alpha\in F_\ell$, we compute {\sl only} the S-polynomials of $g_\alpha$ and $y_j^2\in F_\ell$ for all $j$ such that $\alpha_j=\textnormal{\texttt{1}}$, and divide each such S-polynomial by $F_{\ell_1(\alpha)-1}$.
 Let us denote the result by
 	$$\mathcal{S}_{\alpha, {j}} = \overline{S(g_{\alpha}, y^{2}_{j})}^{F_{\ell_1(\alpha)-1}}$$
 % MAIN lemma for loops
@@ -353,14 +355,14 @@ To visualize our case analysis, it will be useful to develop a good graphical re
 % Graphical representation
 \medskip
 \noindent
-\textbf{Visualization.} Given $g_\alpha\in F_\ell$, we have $\alpha = w1(0)^{n-2l-1}$ is an MCP for $\ell(w)= 2l \leq \ell $. 
-Let $d=2l+1=2\ell_1(\alpha)-1$ be the position of the last $1$ in $\alpha$.
-For $\beta \in P_\alpha^{(k)}$ recall that $\beta_k =0$ and $k$ is chosen such that $\alpha_k=1$. 
-Let  $L_{k}$ be the anti-diagonal line intersecting the end of $k^{th}$ position of $\alpha$, and similarly for $L_{d}$  which intersects the last $1$ in $\alpha$. 
+\textbf{Visualization.} Given $g_\alpha\in F_\ell$, we have $\alpha = w\textnormal{\texttt{1}}(\textnormal{\texttt{0}})^{n-2l-1}$ is an MCP for $\ell(w)= 2l \leq \ell $. 
+Let $d=2l+1=2\ell_1(\alpha)-1$ be the position of the last $\textnormal{\texttt{1}}$ in $\alpha$.
+For $\beta \in P_\alpha^{(k)}$ recall that $\beta_k =\textnormal{\texttt{0}}$ and $k$ is chosen such that $\alpha_k=\textnormal{\texttt{1}}$. 
+Let  $L_{k}$ be the anti-diagonal line intersecting the end of $k^{th}$ position of $\alpha$, and similarly for $L_{d}$  which intersects the last $\textnormal{\texttt{1}}$ in $\alpha$. 
 Then any such $\beta$ we must have a north step, ending at some position on the line $L_k$. This is visualized as in Example~\ref{p_alpha_k_exmaple}.
 % Example visual rep.
 \begin{example} \label{p_alpha_k_exmaple}
-		Suppose we have $\color{green!60!black} k=4$ and $\color{red}{\alpha} = \texttt{010110$\cdots$0}$. Then $\color{blue!60} d=5$. The path $\color{red}{\alpha}$ and lines  
+		Suppose we have $\color{green!60!black} k=4$ and $\color{red}{\alpha} = \textnormal{\texttt{010110$\cdots$0}}$. Then $\color{blue!60} d=5$. The path $\color{red}{\alpha}$ and lines  
 		$\color{green!60!black} L_k$ and $\color{blue!60} L_{d}$ are visualized as
 $$ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -381,10 +383,10 @@ $$
 $$
 The set $P^{(\text{\textcolor{green!60!black}{4}})}_{\color{red}{\alpha}} $ decomposes into four different possibilities depending on the first $d$ entries of  $\beta=\beta_1\beta_2\beta_3\beta_4\beta_5\cdots$:
 $$ P^{(\text{\textcolor{green!60!black}{4}})}_{\color{red}{\alpha}} = \big\{
-	\texttt{010\textcolor{green!60!black}{0}1} |  \cdot \cdot  \texttt{1}  \cdots;\ 
-	\texttt{010\textcolor{green!60!black}{0}0} |  \cdot \cdot  \texttt{1} \cdot \cdot  \texttt{1} \cdots ;\ 
-	\texttt{000\textcolor{green!60!black}{0}1} |  \cdot \cdot  \texttt{1} \cdot \cdot \texttt{1}  \cdots;\ 
-	\texttt{000\textcolor{green!60!black}{0}0} |  \cdot \cdot  \texttt{1}  \cdot \cdot  \texttt{1} \cdot \cdot \texttt{1} \cdots\big\}
+	\textnormal{\texttt{010\textcolor{green!60!black}{0}1}} |  \cdot \cdot  \textnormal{\texttt{1}}  \cdots;\ 
+	\textnormal{\texttt{010\textcolor{green!60!black}{0}0}} |  \cdot \cdot  \textnormal{\texttt{1}} \cdot \cdot  \textnormal{\texttt{1}} \cdots ;\ 
+	\textnormal{\texttt{000\textcolor{green!60!black}{0}1}} |  \cdot \cdot  \textnormal{\texttt{1}} \cdot \cdot \textnormal{\texttt{1}} \cdots;\ 
+	\textnormal{\texttt{000\textcolor{green!60!black}{0}0}} |  \cdot \cdot  \textnormal{\texttt{1}}  \cdot \cdot  \textnormal{\texttt{1}} \cdot \cdot \textnormal{\texttt{1}} \cdots\big\}
 $$ 
 We visualize this as	
 $$
@@ -401,8 +403,9 @@ $$
 	\draw[draw = blue!100, very  thick] (1,2) -- (1,3); % k line
 	\draw[draw = cyan,very thick] (1,3)--(2,3);
 	\draw[draw = cyan, dashed, very thick] (2,3) -- (3,6); % path dashed line
-	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]{$\beta = $\texttt{010\textcolor{green!40!black}{0}1}$\cdot\cdot$};
-	\node at (3, 0.5) [scale=0.7]{$\beta = $\texttt{010\textcolor{green!40!black}{0}1}$\cdot\cdot$};
+	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]
+	                          {$\beta = $\textnormal{\texttt{010\textcolor{green!40!black}{0}1}}$\cdot\cdot$};
+	\node at (3, 0.5) [scale=0.7]{$\beta = $\textnormal{\texttt{010\textcolor{green!40!black}{0}1}}$\cdot\cdot$};
 	\node at (1, 2) [circle, fill=blue, scale=0.3]{}; % blue dot 1
 	\node at (1, 3) [circle, fill=blue, scale=0.3]{}; % blue dot 2
 \end{tikzpicture} \,
@@ -419,8 +422,9 @@ $$
 	\draw[draw = blue!100, very  thick] (1,2) -- (1,3); % k line
 	\draw[draw = cyan,very thick] (1,3)--(1,4);
 	\draw[draw = cyan, dashed, very thick] (1,4) -- (3,6); % path dashed line
-	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]{$\beta = $\texttt{010\textcolor{green!40!black}{0}0}$\cdot\cdot$};
-	\node at (3, 0.5) [scale=0.7]{$\beta = $\texttt{010\textcolor{green!40!black}{0}0}$\cdot\cdot$};
+	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]
+	    {$\beta = $\textnormal{\texttt{010\textcolor{green!40!black}{0}0}}$\cdot\cdot$};
+	\node at (3, 0.5) [scale=0.7]{$\beta = $\textnormal{\texttt{010\textcolor{green!40!black}{0}0}}$\cdot\cdot$};
 	\node at (1, 2) [circle, fill=blue, scale=0.3]{}; % blue dot 1
 	\node at (1, 3) [circle, fill=blue, scale=0.3]{}; % blue dot 2
 \end{tikzpicture}\,
@@ -437,8 +441,9 @@ $$
 	\draw[draw = blue!100, very  thick] (0,3) -- (0,4); % k line
 	\draw[draw = cyan,very thick] (0,4)--(1,4);
 	\draw[draw = cyan, dashed, very thick] (1,4) -- (3,6); % path dashed line
-	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]{$\beta = $\texttt{000\textcolor{green!40!black}{0}1}$\cdot\cdot$};
-	\node at (3, 0.5) [scale=0.7]{$\beta = $\texttt{000\textcolor{green!40!black}{0}1}$\cdot\cdot$};
+	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]
+	   {$\beta = $\textnormal{\texttt{000\textcolor{green!40!black}{0}1}}$\cdot\cdot$};
+	\node at (3, 0.5) [scale=0.7]{$\beta = $\textnormal{\texttt{000\textcolor{green!40!black}{0}1}}$\cdot\cdot$};
 	\node at (0, 3) [circle, fill=blue, scale=0.3]{}; % blue dot 1
 	\node at (0, 4) [circle, fill=blue, scale=0.3]{}; % blue dot 2
 \end{tikzpicture}\,
@@ -455,8 +460,9 @@ $$
 	\draw[draw = blue!100, very  thick] (0,3) -- (0,4); % k line
 	\draw[draw = cyan,very thick] (0,4)--(0,5);
 	\draw[draw = cyan, dashed, very thick] (0,5) -- (3,6); % path dashed line
-	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]{$\beta = $\texttt{000\textcolor{green!40!black}{0}0}$\cdot\cdot$};
-	\node at (3, 0.5) [scale=0.7]{$\beta = $\texttt{000\textcolor{green!40!black}{0}0}$\cdot\cdot$};
+	\node at (3, 0.5) [rounded rectangle, opacity = 0.5, fill = cyan, scale=0.7]
+		{$\beta = $\textnormal{\texttt{000\textcolor{green!40!black}{0}0}}$\cdot\cdot$};
+	\node at (3, 0.5) [scale=0.7]{$\beta = $\textnormal{\texttt{000\textcolor{green!40!black}{0}0}}$\cdot\cdot$};
 	\node at (0, 3) [circle, fill=blue, scale=0.3]{}; % blue dot 1
 	\node at (0, 4) [circle, fill=blue, scale=0.3]{}; % blue dot 2
 \end{tikzpicture} \,.  
@@ -478,7 +484,7 @@ In this section, we decompose the set $P_\alpha$ according to first $d=2\ell_1(\
 \begin{definition} \label{u_alphar}
 	Let $\alpha$ be an MCP with $d = 2\ell_1(\alpha)-1$. For $1 \leq r \leq \ell_1(\alpha)$, we define
 		\begin{equation}
-		U_{\alpha, r} = \big \{ u\in \{0,1\}^d \big | ( \alpha_i = 0 \implies u_i = 0)_{1 \leq i \leq d}\  \text{ and }\   \ell_1(u) = \ell_1(\alpha) -r  \big \}.
+		U_{\alpha, r} = \big \{ u\in \{\textnormal{\texttt{0,1}}\}^d \big | ( \alpha_i = \textnormal{\texttt{0}} \implies u_i = \textnormal{\texttt{0}})_{1 \leq i \leq d}\  \text{ and }\   \ell_1(u) = \ell_1(\alpha) -r  \big \}.
 		 \label{u_alpha_eqn}
 	\end{equation}
 	Given $u \in U_{\alpha,r}$, we define
@@ -489,9 +495,9 @@ In this section, we decompose the set $P_\alpha$ according to first $d=2\ell_1(\
 \end{definition}
 % Example U_\alpha,r
 \begin{example} \label{u_alpha_example}
-	Let $\alpha = \texttt{010110} \cdots \texttt{0}$, then $\ell_1(\alpha)=3$. For $r =1$, we have
+	Let $\alpha = \textnormal{\texttt{010110}} \cdots \textnormal{\texttt{0}}$, then $\ell_1(\alpha)=3$. For $r =1$, we have
 		\begin{equation*} 
-		U_{\texttt{010110} \cdots \texttt{0},1} = \{\texttt{01010, 01001, 00011}\}\,.
+		U_{\textnormal{\texttt{010110}} \cdots \textnormal{\texttt{0}},1} = \{\textnormal{\texttt{01010, 01001, 00011}}\}\,.
 	\end{equation*}
 \end{example} 
 The subsets $P_{u, \alpha}$ are disjoint, so we can partition $P_\alpha = \bigcup_{r = 1}^{\ell_1(\alpha)} \bigcup_{u \in U_{\alpha,r}} P_{u,\alpha}$. Therefore, 
@@ -502,29 +508,8 @@ The subsets $P_{u, \alpha}$ are disjoint, so we can partition $P_\alpha = \bigcu
 We remark that for $\beta\in P_{u, \alpha}$, the only restriction on $\beta_{d+1}\cdots\beta_n$ is that $\ell_1(\beta_{d+1}\cdots\beta_n)=\ell_1(\beta)-\ell_1(u)=r$.
 Hence, in the last  summation in Equation~\eqref{y_beta_sum},  we are summing over all square-free monomials of degree $r$ in the variables $y_{d+1},\dots,y_n$.
 
-%\begin{definition}[$U^{(k)}_{\alpha,r}$] \label{u_alpha_k}
-%		Let $\alpha = w1(0)^{n-2l-1}$ be an MCP with $d = 2l = |w|$, it follows that $\ell_1(\alpha|) = l+1$. For a fixed $1 \leq r \leq l+1$ and fixed $1 \leq k \leq d$, define the set:
-%	\begin{equation} \label{u_alpha_k_eqn}
-%		U_{\alpha,r}^{(k)} = \{u \in U_{\alpha,r} \ | \ u_k = 0 \} \subseteq U_{\alpha,r} 
-%	\end{equation}
-%\end{definition}
-%
-%By the analogous notation and definitions, we can state the partition of Definition~\ref{p_alpha_k} as:
-%\begin{equation}
-%    \label{p_alpha_k_analog_eqn}
-%	P_\alpha^{(k)} = \bigcup_{r=1}^{l+1}  \bigcup_{u \in U_{\alpha,r}^{(k)}} P_{u,\alpha}
-%\end{equation}
-%
-%Similarly, we have the algebraic decomposition:
-%
-%\begin{align} \label{y_beta_k_sum}
-%	\sum_{\beta \in P_\alpha^{(k)}} y^ \beta   &= \sum_{r=1}^{l+1} \sum_{u \in U_{\alpha,r}^{(k)}} y^u
-%										\sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}   
-%\end{align} 
-
-% Definition u(\alpha, k)
 \begin{definition} \label{u_alpha_one_k}
-     For $\alpha_k=1$, let $u(\alpha, k) = \alpha_1 \cdots \alpha_{k-1}\texttt{0}\alpha_{k+1} \cdots \alpha_{d}\in U_{\alpha, 1}$.
+     For $\alpha_k=\textnormal{\texttt{1}}$, let $u(\alpha, k) = \alpha_1 \cdots \alpha_{k-1}\textnormal{\texttt{0}}\alpha_{k+1} \cdots \alpha_{d}\in U_{\alpha, 1}$.
 \end{definition}
 
 %%%%%%%%%%%%%%
@@ -535,7 +520,7 @@ Hence, in the last  summation in Equation~\eqref{y_beta_sum},  we are summing ov
 \begin{lemma}
 	    \label{spoly_lemma}
 	    Let $g_\alpha \in F_\ell$ and
-	     given any $1< k\le 2\ell_1(\alpha)-1$, such that $\alpha_k=1$.  ($\alpha_1$ is always 0). We have
+	     given any $1< k\le 2\ell_1(\alpha)-1$, such that $\alpha_k=\textnormal{\texttt{1}}$.  ($\alpha_1$ is always \textnormal{\texttt{0}}). We have
 	    \begin{equation} \label{spoly_lemma_eqn}
     	    	\overline{S(g_\alpha, y_k^2)}^{F_{-1}} = \sum_{\beta \in P_{\alpha}^{(k)}} y^\beta y_k.
 	    \end{equation}
@@ -552,10 +537,10 @@ Hence, in the last  summation in Equation~\eqref{y_beta_sum},  we are summing ov
 \end{proof}
 
 For $g_\alpha\in F_\ell$ and $k$ such that
-$\alpha_k = 1$, Lemma~\ref{spoly_lemma} and $P_\alpha^{(k)} = \bigcup_{r = 1}^{\ell_1(\alpha)} \bigcup_{u \in U_{\alpha,r},\,u_k=0 } P_{u,\alpha}$ gives
+$\alpha_k = 1$, Lemma~\ref{spoly_lemma} and $P_\alpha^{(k)} = \bigcup_{r = 1}^{\ell_1(\alpha)} \bigcup_{u \in U_{\alpha,r},\,u_k=\textnormal{\texttt{0}} } P_{u,\alpha}$ gives
 \begin{equation}
  \label{spoly_lemma_eqn2}
-	\overline{S(g_\alpha, y_k^2)}^{F_{-1}} = \sum_{\beta \in P_\alpha^{(k)}} y^\beta y_k  = \sum_{r=1}^{\ell_1(\alpha)}\sum_{u \in U_{\alpha,r}\atop u_k=0 \hfill} y^{u}y_k \sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}  
+	\overline{S(g_\alpha, y_k^2)}^{F_{-1}} = \sum_{\beta \in P_\alpha^{(k)}} y^\beta y_k  = \sum_{r=1}^{\ell_1(\alpha)}\sum_{u \in U_{\alpha,r}\atop u_k=\textnormal{\texttt{0}} \hfill} y^{u}y_k \sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}  
 \end{equation} 
 whereas before $d=2\ell_1(\alpha)-1$. Now we need to divide $\overline{S(g_\alpha, y_k^2)}^{F_{-1}}$ by $F_{\ell_1(\alpha)-1}$. We will do this in two separate cases: the terms of this equation for $r=1$ and those for $r>1$.
 
@@ -564,7 +549,7 @@ whereas before $d=2\ell_1(\alpha)-1$. Now we need to divide $\overline{S(g_\alph
 %%  Reductions of $r=1$ in Equation spoly_lemma_eqn2
 %%%%%%%%%%%%%%
 \subsection{Division of the $r=1$ term in Equation~\eqref{spoly_lemma_eqn2} by $F_{\ell_1(\alpha)-1}$}  \label{beta_prime_redu} 
-When $r=1$ in Equation~\eqref{spoly_lemma_eqn2}, there is only a single $u\in U_{\alpha,1}$ such that $u_k=0$, namely $u(\alpha,k)$ as in Definition~\ref{u_alpha_one_k}.
+When $r=1$ in Equation~\eqref{spoly_lemma_eqn2}, there is only a single $u\in U_{\alpha,1}$ such that $u_k=\textnormal{\texttt{0}}$, namely $u(\alpha,k)$ as in Definition~\ref{u_alpha_one_k}.
 The $r=1$ term in Equation~\eqref{spoly_lemma_eqn2} is 
 $$
 	 y^{u(\alpha,k)}y_k \sum_{d+1 \leq j \leq n}  y_{j}  = \sum_{j=d+1}^n y^\alpha y_j 
@@ -592,7 +577,7 @@ Once again, we want to separate the $r=1$ terms in Equation~\eqref{eq:thefirstr1
 \begin{case}[{\it $s=1$ in Equation~\eqref{eq:thefirstr1}}\null] \label{r=1}
 In the case of $s = 1$ in Equation~\eqref{eq:thefirstr1} and $v \in U_{\alpha, 1}$, we can represent any path $ y^{v}y_{i_1}y_{i_2}$ visually as in
 Figure~\ref{Fig:case1}.
-For each $v \in U_{\alpha, 1}$, we have $\ell_1(v) =\ell_1(\alpha) - 1$ and let $k$ be the unique position, where $v_k=0$ and $\alpha_k=1$.
+For each $v \in U_{\alpha, 1}$, we have $\ell_1(v) =\ell_1(\alpha) - 1$ and let $k$ be the unique position, where $v_k=\textnormal{\texttt{0}}$ and $\alpha_k=\textnormal{\texttt{1}}$.
 The paths of the monomial $y^{v}y_{i_1}y_{i_2}$ in the sum have two ones after the $d^{th}$ position.
 If we select $i_1 = d+1$ and $i_2 = d+2$, this will form a  {\sl new} MCP path
 $\alpha^{(k)}=\alpha_1 \cdot\cdot\, \alpha_{k-\!1} \textnormal{\texttt{0}} \alpha_{k+\!1} \cdot\cdot\, \alpha_{d}  \textnormal{\texttt{11}} (\textnormal{\texttt{0}})^{n-\!d-\!2}$, 
@@ -669,9 +654,9 @@ All such paths clearly remain above the diagonal and no further divisions using 
 %%%%%%%%%%%%%%
 \subsection{Division of $r>1$ terms in Equation~\eqref{spoly_lemma_eqn2} by $F_{\ell_1(\alpha)-1}$} \label{beta_redu}
 We now focus on the  $r>1$ terms in Equation~\eqref{spoly_lemma_eqn2}. 
-Fix $r>1$ and fix $u \in U_{\alpha, r}$ such that $u_k=0$. We are considering a monomial of the form 
+Fix $r>1$ and fix $u \in U_{\alpha, r}$ such that $u_k=\textnormal{\texttt{0}}$. We are considering a monomial of the form 
 $y^{u}y_k y_{i_1} \cdots y_{i_{r}}  $, where $d+1 \leq i_1 < \cdots < i_r \leq n$.
-Note that $\alpha_k = 1$ and $u_k =0$, and there is at least one more entry such that $\alpha_j = 1$ and $u_j = 0$, for $j \ne k$. Hence, there are \textit{at least} two entries in which $u$ differs from $\alpha$. We further split $r>1$ terms into two cases, where $r=2$ or $r>2$.
+Note that $\alpha_k = \textnormal{\texttt{1}}$ and $u_k =\textnormal{\texttt{0}}$, and there is at least one more entry such that $\alpha_j = 1$ and $u_j = \textnormal{\texttt{0}}$, for $j \ne k$. Hence, there are \textit{at least} two entries in which $u$ differs from $\alpha$. We further split $r>1$ terms into two cases, where $r=2$ or $r>2$.
 We visualize this in Figure~\ref{Fig:case2}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Figure of cases r>1
@@ -804,11 +789,11 @@ All paths will match a subset of the paths we encounter in \S\ref{beta_prime_red
 can be performed with polynomials in $F_{\ell_1(\alpha)-1}$.
 
 \begin{case}[{\it $r=2$ in Equation~\eqref{spoly_lemma_eqn2}}\null] \label{r=2}
- As visualized in Figure~\ref{Fig:case2}, when $r=2$ in Equation~\eqref{spoly_lemma_eqn2} the paths we receive correspond exactly to the paths in Case~\ref{r=1} for which $v_k=1$. In this case, these are the new MCPs which are generated. 
+ As visualized in Figure~\ref{Fig:case2}, when $r=2$ in Equation~\eqref{spoly_lemma_eqn2} the paths we receive correspond exactly to the paths in Case~\ref{r=1} for which $v_k=\textnormal{\texttt{1}}$. In this case, these are the new MCPs which are generated. 
 \end{case} 
 
 \begin{case}[{\it $r \geq 3$ in Equation~\eqref{spoly_lemma_eqn2}}\null] \label{rgeq3}
- Also Visualized in Figure~\ref{Fig:case2}, when $r>2$ in Equation~\eqref{spoly_lemma_eqn2} this set of paths corresponds exactly to the paths in Case~\ref{rgeq2}, for which $v_k=1$.
+ Also Visualized in Figure~\ref{Fig:case2}, when $r>2$ in Equation~\eqref{spoly_lemma_eqn2} this set of paths corresponds exactly to the paths in Case~\ref{rgeq2}, for which $v_k=\textnormal{\texttt{1}}$.
 \end{case}
 
 %%%%%%%%%%%%%%
@@ -819,21 +804,21 @@ The analysis of \S\ref{beta_prime_redu} and \S\ref{beta_redu} shows that in orde
 \begin{align}
 	\overline{S(g_\alpha, y_k^2)}^{F_{\ell_1(\alpha)-1}} = &
 	  - \sum_{r=2}^{\ell_1(\alpha)+1} \sum_{v \in U_{\alpha,r-1}} ry^v \sum_{d+1 \leq i_1 < \cdots < i_{r} \leq n}y_{i_1} \cdots  y_{i_{r}} \label{eq:sreduction}\\ 
-	  &\  + \sum_{r=2}^{\ell_1(\alpha)}\sum_{u \in U_{\alpha,r}\atop u_k=0 \hfill} y^{u}y_k \sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}  
+	  &\  + \sum_{r=2}^{\ell_1(\alpha)}\sum_{u \in U_{\alpha,r}\atop u_k=\textnormal{\texttt{0}} \hfill} y^{u}y_k \sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}  
 	   \notag\\
 	   = &
-	   \sum_{r=2}^{\ell_1(\alpha)+1} \sum_{v \in U_{\alpha,r-1}\atop v_k=0\hfill} (-r)y^v \sum_{d+1 \leq i_1 < \cdots < i_{r} \leq n}y_{i_1} \cdots  y_{i_{r}} \label{eq:sreduction2}\\ 
+	   \sum_{r=2}^{\ell_1(\alpha)+1} \sum_{v \in U_{\alpha,r-1}\atop v_k=\textnormal{\texttt{0}}\hfill} (-r)y^v \sum_{d+1 \leq i_1 < \cdots < i_{r} \leq n}y_{i_1} \cdots  y_{i_{r}} \label{eq:sreduction2}\\ 
 	  &\  + \sum_{r=2}^{\ell_1(\alpha)}\sum_{v \in U_{\alpha,r-1}\atop v_k=1 \hfill} (-r+1)y^{v} \sum_{d+1 \leq i_1 < \cdots < i_r \leq n} y_{i_1} \cdots y_{i_{r}}.
 	   \notag
 \end{align}
-In the second equality, we combined terms using the fact that for $u \in U_{\alpha,r}$ and $u_k=0$, the term $y^uy_k=y^v$ for $v \in U_{\alpha,r-1}$ and $v_k=1$. When $r=2$, the term $v \in U_{\alpha,r-1}$ and $v_k=1$ is unique and is exactly $v=u(\alpha,k)$  as in Definition~\ref{u_alpha_one_k}.
+In the second equality, we combined terms using the fact that for $u \in U_{\alpha,r}$ and $u_k=\textnormal{\texttt{0}}$, the term $y^uy_k=y^v$ for $v \in U_{\alpha,r-1}$ and $v_k=\textnormal{\texttt{1}}$. When $r=2$, the term $v \in U_{\alpha,r-1}$ and $v_k=\textnormal{\texttt{1}}$ is unique and is exactly $v=u(\alpha,k)$  as in Definition~\ref{u_alpha_one_k}.
 
 %%%%%%%%%%%%%%
 %%  The matrix
 %%%%%%%%%%%%%%
 \subsection{\label{results} The Matrix of the Linear Transformation}
 
-The process until now has focused on a single S-polynomial reduction $\overline{S(g_\alpha, y_k^2)}^{F_{\ell_1(\alpha)-1}} =\mathcal{S}_{\alpha, k} $, for a fixed $k$ and fixed $\alpha$. In this section, we examine all possible $\mathcal{S}_{\alpha, k_{j}}$, letting $k_j$ vary while keeping $\alpha$ fixed. Also, since $\alpha$ has $\ell_1(\alpha)$ entries equal to 1, we have $U_{\alpha, 1}=\big\{u(\alpha,k_i)\big| 1\le i\le \ell_1(\alpha)\big\}$ with  $|U_{\alpha,1}| = \ell_1(\alpha)$. Let
+The process until now has focused on a single S-polynomial reduction $\overline{S(g_\alpha, y_k^2)}^{F_{\ell_1(\alpha)-1}} =\mathcal{S}_{\alpha, k} $, for a fixed $k$ and fixed $\alpha$. In this section, we examine all possible $\mathcal{S}_{\alpha, k_{j}}$, letting $k_j$ vary while keeping $\alpha$ fixed. Also, since $\alpha$ has $\ell_1(\alpha)$ entries equal to \textnormal{\texttt{1}}, we have $U_{\alpha, 1}=\big\{u(\alpha,k_i)\big| 1\le i\le \ell_1(\alpha)\big\}$ with  $|U_{\alpha,1}| = \ell_1(\alpha)$. Let
    $$A_\alpha = \ \  \Big[ \text{Coefficient of } y^{u(\alpha, k_i)}y_{d+1}y_{d+2} \text{ in } \mathcal{S}_{\alpha,k_j} \Big]_{1 \leq i,j \leq l+1}$$
 When $r=2$ in Equation~\eqref{eq:sreduction2} we readily see that we have $-2$ in the diagonal of $A_\alpha$ and $-1$ off the  diagonal. 
 This matrix is invertible, given explicitly by
@@ -861,12 +846,12 @@ For the other terms, fix $r, v$ and $d+1 \leq i_1 < \cdots < i_r \leq n$, such t
 We want to determine the coefficient of $y^{v} y_{i_1} \cdots y_{i_{r}}$ in $\blue{\phi} (\mathcal{S}_{\alpha, k_{i}}) $. This will depend on the value of $v_{k_i}$.
 
 %%%%%%%%%%%%%%%%
-\begin{case}[{\it $v_{k_i}=0$}\null] \label{vk=0} 
-Since $v_{k_i}=0$ and $v \in U_{\alpha,r-1}$, there are $(r-1)-1=r-2$ other entries of $v$ such that $\alpha_k=1$ and $v_k=0$.
+\begin{case}[{\it $v_{k_i}=\textnormal{\texttt{0}}$}\null] \label{vk=0} 
+Since $v_{k_i}=\textnormal{\texttt{0}}$ and $v \in U_{\alpha,r-1}$, there are $(r-1)-1=r-2$ other entries of $v$ such that $\alpha_k=\textnormal{\texttt{1}}$ and $v_k=\textnormal{\texttt{0}}$.
 On the other hand, the number of positions where $\alpha_k=v_k=1$ is $\ell_1(\alpha)-r+1$.
 The coefficient of $y^{v} y_{i_1} \cdots y_{i_{r}}$ in $\blue{\phi} (\mathcal{S}_{\alpha, k_{i}}) $ is
 \begin{align*}
- -rc_{ii}  + \sum_{v_{k_j}=0 \atop j\ne i}  -rc_{ij}   + \sum_{v_{k_j}=1 \atop j\ne i}  (-r+1)c_{ij}  
+ -rc_{ii}  + \sum_{v_{k_j}=\textnormal{\texttt{0}} \atop j\ne i}  -rc_{ij}   + \sum_{v_{k_j}=1 \atop j\ne i}  (-r+1)c_{ij}  
     &= \frac{r\ell_1(\alpha) -r(r-2) + (-r+1)(\ell_1(\alpha)-r+1)}{\ell_1(\alpha)+1} \\
     &= 1\,.
  \end{align*}
@@ -875,11 +860,11 @@ The coefficient of $y^{v} y_{i_1} \cdots y_{i_{r}}$ in $\blue{\phi} (\mathcal{S}
 
 %%%%%%%%%%%%%%%%
 \begin{case}[{\it $v_{k_i}=1$}\null] \label{vk=1} 
-Now, $\alpha_{k_i}=v_{k_i}=1$. There are $r-1$ entries of $v$ such that $\alpha_k=1$ and $v_k=0$
+Now, $\alpha_{k_i}=v_{k_i}=1$. There are $r-1$ entries of $v$ such that $\alpha_k=\textnormal{\texttt{1}}$ and $v_k=\textnormal{\texttt{0}}$
 and $\ell_1(\alpha)-r$ entries where $\alpha_k=v_k=1$, other than the entries where $k=k_i$.
 The coefficient of $y^{v} y_{i_1} \cdots y_{i_{r}}$ in $\blue{\phi} (\mathcal{S}_{\alpha, k_{i}}) $ is now
 \begin{align*}
- (-r+1)c_{ii}  &+ \sum_{v_{k_j}=0 \atop j\ne i}  -rc_{ij}   + \sum_{v_{k_j}=1 \atop j\ne i}  (-r+1)c_{ij}  \\
+ (-r+1)c_{ii}  &+ \sum_{v_{k_j}=\textnormal{\texttt{0}} \atop j\ne i}  -rc_{ij}   + \sum_{v_{k_j}=1 \atop j\ne i}  (-r+1)c_{ij}  \\
     &= \frac{(r-1)\ell_1(\alpha) -r(r-1) + (-r+1)(\ell_1(\alpha)-r)}{\ell_1(\alpha)+1} 
     = 0\,.
  \end{align*}
@@ -887,24 +872,24 @@ The coefficient of $y^{v} y_{i_1} \cdots y_{i_{r}}$ in $\blue{\phi} (\mathcal{S}
  
 It follows that
 \begin{equation}  \label{phi_out1}
-    \blue{\phi}(\mathcal{S}_{\alpha, k_i}) =   y^{u(\alpha, k_i)} \sum_{d+1 \leq i_1 < i_2 \leq n}y_{i_1} y_{i_2} +  \sum_{r=3}^{\ell_1(\alpha)+1} \sum_{v \in U_{\alpha,r-1}\atop v_{k_i}=0\hfill} y^v \sum_{d+1 \leq i_1 < \cdots < i_{r} \leq n}y_{i_1} \cdots  y_{i_{r}}.  
+    \blue{\phi}(\mathcal{S}_{\alpha, k_i}) =   y^{u(\alpha, k_i)} \sum_{d+1 \leq i_1 < i_2 \leq n}y_{i_1} y_{i_2} +  \sum_{r=3}^{\ell_1(\alpha)+1} \sum_{v \in U_{\alpha,r-1}\atop v_{k_i}=\textnormal{\texttt{0}}\hfill} y^v \sum_{d+1 \leq i_1 < \cdots < i_{r} \leq n}y_{i_1} \cdots  y_{i_{r}}.  
 \end{equation}
 This sum is non-zero since $\ell_1(\alpha)-1\le\ell \le \Floor{\frac{n-1}{2}}-1$, therefore $d+2\le n$.
-We want to compare this with $g_{\alpha^{(k_i)}}$, where $\alpha^{(k_i)}=u(\alpha, k_i)\texttt{110}^{n-d-2}$ for $d=2\ell_1(\alpha)-1$.
+We want to compare this with $g_{\alpha^{(k_i)}}$, where $\alpha^{(k_i)}=u(\alpha, k_i)\textnormal{\texttt{110}}^{n-d-2}$ for $d=2\ell_1(\alpha)-1$.
 Using Equation~\eqref{y_beta_sum},
 \begin{equation} \label{gin}
 	g_{\alpha^{(k_i)}} = y^{{\alpha^{(k_i)}}}+  \sum_{s=1}^{\ell_1(\alpha^{(k_i)})} \sum_{u \in U_{\alpha^{(k_i)},s}} y^u
 										\sum_{d+3 \leq i_1 < \cdots < i_s \leq n} y_{i_1} \cdots y_{i_{s}}. 
 \end{equation}
-Note that $\ell_1(\alpha^{(k_i)})=\ell_1(\alpha)+1$ and for any $u \in U_{\alpha^{(k_i)},s}$ we must have $u_{k_i}=0$, since $\alpha^{(k_i)}_{k_i}=0$. For any other position $1\le k\le d$, we have $\alpha_k=\alpha_k^{(k_i)}$. Hence, $\alpha_k=0 \implies u_k=0 \implies v_k=0$, for any  $v\in U_{\alpha,r-1}$. For $k=d+1$ or $k=d+2$, there are no constraints on $u$ as $\alpha_{d+1}^{(k_i)}=\alpha_{d+2}^{(k_i)}=1$. Moreover, the term $ y^{{\alpha^{(k_i)}}}=y^{u(\alpha, k_i)}y_{d+1}y_{d+2}$ appears in the first sum of Equation~\eqref{phi_out1}.
+Note that $\ell_1(\alpha^{(k_i)})=\ell_1(\alpha)+1$ and for any $u \in U_{\alpha^{(k_i)},s}$ we must have $u_{k_i}=\textnormal{\texttt{0}}$, since $\alpha^{(k_i)}_{k_i}=\textnormal{\texttt{0}}$. For any other position $1\le k\le d$, we have $\alpha_k=\alpha_k^{(k_i)}$. Hence, $\alpha_k=\textnormal{\texttt{0}} \implies u_k=\textnormal{\texttt{0}} \implies v_k=\textnormal{\texttt{0}}$, for any  $v\in U_{\alpha,r-1}$. For $k=d+1$ or $k=d+2$, there are no constraints on $u$ as $\alpha_{d+1}^{(k_i)}=\alpha_{d+2}^{(k_i)}=\textnormal{\texttt{1}}$. Moreover, the term $ y^{{\alpha^{(k_i)}}}=y^{u(\alpha, k_i)}y_{d+1}y_{d+2}$ appears in the first sum of Equation~\eqref{phi_out1}.
 This shows that every term in Equation~\eqref{gin} appears in Equation~\eqref{phi_out1}.
 
 For the converse, note that any term $y^{u(\alpha, k_i)} y_{i_1} y_{i_2}$  for $d+1 \leq i_1 < i_2 \leq  n$, corresponds to 
 $y^{u(\alpha, k_i)} y_{d+1} y_{d+2}=y^{\alpha^{(k_1)}}$;
-or $y^{u(\alpha, k_i)}y_{d+1}y_{i}$ and $y^{u(\alpha, k_i)}y_{d+2}y_{i}$ for $u(\alpha, k_i)\texttt{10}, u(\alpha, k_i)\texttt{01}\in U_{\alpha^{(k_i)},1}$ and
+or $y^{u(\alpha, k_i)}y_{d+1}y_{i}$ and $y^{u(\alpha, k_i)}y_{d+2}y_{i}$ for $u(\alpha, k_i)\textnormal{\texttt{10}}, u(\alpha, k_i)\textnormal{\texttt{01}}\in U_{\alpha^{(k_i)},1}$ and
 $d+3\le i\le n$;
-or $y^{u(\alpha, k_i)}y_{i_1}y_{i_2}$ for $u(\alpha, k_i)\texttt{00}\in U_{\alpha^{(k_i)},2}$ and $d+3\le i_1<i_2\le n$.
-Similarly, for $v\in U_{\alpha,r-1}$ with $v_{k_i}=0$, the terms $y^v y_{i_1} \cdots  y_{i_{r}} $ for $d+1 \leq i_1 < \cdots < i_{r} \leq n$ correspond to  
+or $y^{u(\alpha, k_i)}y_{i_1}y_{i_2}$ for $u(\alpha, k_i)\textnormal{\texttt{00}}\in U_{\alpha^{(k_i)},2}$ and $d+3\le i_1<i_2\le n$.
+Similarly, for $v\in U_{\alpha,r-1}$ with $v_{k_i}=\textnormal{\texttt{0}}$, the terms $y^v y_{i_1} \cdots  y_{i_{r}} $ for $d+1 \leq i_1 < \cdots < i_{r} \leq n$ correspond to  
 $y^vy_{d+1} y_{d+2} y_{j_{3}}\cdots  y_{j_{r-1}} $, for $v\texttt{11}\in U_{\alpha^{(k_i)},r}$ and $d+3 \leq j_3 < \cdots <j_{r} \leq n$; 
 or 
 $y^vy_{d+1} y_{j_{2}}\cdots  y_{j_{r-1}} $ and $y^vy_{d+2} y_{j_{2}}\cdots  y_{j_{r-1}} $ for $v\texttt{01},v\texttt{10} \in U_{\alpha^{(k_i)},r+1}$ and $d+3 \leq j_2< \cdots <j_{r} \leq n$;
@@ -934,7 +919,7 @@ From this we will conclude that $B$ is a basis, and therefore $F_\ell$ is the fu
 \begin{proof}
 If $y^\delta$ is not square free, then it is divisible by $y_k^2$ for some $k$ and we get $\overline{y^\delta}^{F_\ell}=0$. 
 If $y^\delta$ crosses the diagonal, 
-let $k$ be the smallest integer such that, $\alpha=\delta_1\delta_2\cdots\delta_k \texttt{0}^{n-k}$ 
+let $k$ be the smallest integer such that, $\alpha=\delta_1\delta_2\cdots\delta_k \textnormal{\texttt{0}}^{n-k}$ 
 crosses under the diagonal. It is clear that $\alpha$ is a MCP and $\ell_1(\alpha)-1\le \ell$, hence $g_\alpha\in F_\ell$. Since we have $y^\delta=y^\alpha y^\epsilon$, we obtain
 \begin{equation}\label{eq:contra}
 	\overline{y^\delta}^{F_\ell}=\overline{y^\alpha y^\epsilon}^{F_\ell}=\overline{-\sum_{\beta\in P_\alpha}y^\beta y^\epsilon}^{F_\ell}.
@@ -1021,7 +1006,7 @@ For $k\le \lfloor \frac{n}{2} \rfloor$, let $\lambda=(n-k,k)$.  The number $f^\l
 \end{proposition}
 
 \begin{proof}
-This is a very classical result and some version of it can be found in~\cite{Stanley}. The bijection $T\mapsto y^\gamma$ for $T\in SYT_\lambda$ is  given by $\gamma_i=0$, if $i$ lies in the first row of $T$, otherwise $\gamma_i=1$. One then checks that staying above the diagonal is equivalent to the inequalities defining standard  Young tableaux.
+This is a very classical result and some version of it can be found in~\cite{Stanley}. The bijection $T\mapsto y^\gamma$ for $T\in SYT_\lambda$ is  given by $\gamma_i=\textnormal{\texttt{0}}$, if $i$ lies in the first row of $T$, otherwise $\gamma_i=\textnormal{\texttt{1}}$. One then checks that staying above the diagonal is equivalent to the inequalities defining standard  Young tableaux.
 \end{proof}
 
 In the proof above, let us denote by  $y^T$ the monomial we obtain from $T$. We thus have that $B$ in  Equation~\eqref{Eq:basis1} is also given by the following disjoint union
