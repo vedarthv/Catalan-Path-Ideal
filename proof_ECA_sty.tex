@@ -78,13 +78,22 @@
 
 \usepackage{filecontents}
 \begin{filecontents}{\jobname.bib}
-	@book{iva,
-	title={{Ideals, Varieties, and Algorithms: An Introduction to Computational Algebraic Geometry and Commutative Algebra}},
-	author={Cox, David and Little, John and O'Shea, Donal},
-	year={2013},
-	publisher={Springer Science \& Business Media},
-  }
-  
+
+@book{iva,
+    AUTHOR = {Cox, David and Little, John and O'Shea, Donal},
+     TITLE = {Ideals, varieties, and algorithms},
+    SERIES = {Undergraduate Texts in Mathematics},
+   EDITION = {Second},
+      NOTE = {An introduction to computational algebraic geometry and
+              commutative algebra},
+ PUBLISHER = {Springer-Verlag, New York},
+      YEAR = {1997},
+     PAGES = {xiv+536},
+      ISBN = {0-387-94680-2},
+   MRCLASS = {13P10 (13-01 14-01 14Qxx 68Q40)},
+  MRNUMBER = {1417938},
+} 
+
   @article {HRS,
 	  AUTHOR = {Haglund, James and Rhoades, Brendon and Shimozono, Mark},
 	   TITLE = {{Ordered set partitions, generalized coinvariant algebras, and the Delta Conjecture}},
@@ -251,19 +260,19 @@
 \begin{center}
 {\large \bf The Gr\"obner Basis of a Catalan Path Ideal}\\[10pt]
 
-Nantel Bergeron$^\dag$, Xavier Mootoo$^\ddag$\\[20pt]
+Nantel Bergeron$^\dag$, Xavier Mootoo$^\ddag$ and Vedarth Vyas$^*$\\[20pt]
 
-\footnotesize {\it $^\dag$Department of Mathematics and Statistics, York  University, Toronto, Ontario M3J 1P3, CANADA,\\
-Email: bergeron@mathstat.yorku.ca}\\[10pt]
-
-\footnotesize {\it $^\ddag$Department of Mathematics and Statistics, York  University, Toronto, Ontario M3J 1P3, CANADA,\\
-Email: xmootoo@gmail.com}\\[10pt]
+\footnotesize {\it Department of Mathematics and Statistics, York  University, Toronto, Ontario M3J 1P3, CANADA.\\
+$^\dag$ Email: bergeron@mathstat.yorku.ca\\
+$^\ddag$ Email: xmootoo@gmail.com\\
+$^*$ Email: vvyas@my.yorku.ca}\\[10pt]
 
 \noindent {\footnotesize {\bf Received}: March 16, 2022},
 {\footnotesize {\bf Accepted}: June 03, 2022}, {\footnotesize {\bf Published}: August XX, xxxx}\\
 
 \noindent The authors: Released under the CC BY-ND license (International 4.0)
 \end{center}
+
 
 \setcounter{page}{1} \thispagestyle{empty}
 
@@ -272,17 +281,18 @@ Email: xmootoo@gmail.com}\\[10pt]
 \normalsize
 
 \noindent
-{\sc Abstract: For the ideal $I = \langle y_1 +  \dots + y_n, y^2_1, \dots , y^2_n \rangle$ in $R = \field[y_1, \dots , y_n]$ 
+{\sc Abstract:} For the ideal $I = \langle y_1 +  \dots + y_n, y^2_1, \dots , y^2_n \rangle$ in $R = \field[y_1, \dots , y_n]$ 
 with char($\field$) = 0, we show that the reduced Gr\"obner basis with lex-order consists of polynomials $g_\alpha$ that are
 represented in terms of paths, moving northeast in the Cartesian plane, that stay above the diagonal 
 and cross the diagonal at the last step.  This implies that a linear basis for the quotient ring $R/I$ is given by a set of Catalan paths. We show that the dimension 
 is the number of standard Young tableaux of size $n$ and height at most two. The graded Frobenius characteristic of $R/I$ as a symmetric group module is given by 
-$\sum_{k=0}^{\lfloor \frac{n}{2} \rfloor } s_{n-k,k}q^k$.} 
+$\sum_{k=0}^{\lfloor \frac{n}{2} \rfloor } s_{n-k,k}q^k$.
 
 \bigskip
 
 \noindent{\bf Keywords}: Gr\"obner Basis; Catalan Numbers; Path Enumeration\\
-\noindent{\bf 2020 Mathematics Subject Classification}: ....; ....; .... 
+
+\noindent{\bf 2020 Mathematics Subject Classification}: 05E40; 13P10
 
 \section{Introduction} 
 Let $R = \field[y_1, \dots, y_n]$ be the polynomial ring over a field $\field$ with $\text{char}( \field) = 0$ and consider the ideal:
@@ -309,8 +319,8 @@ We span \S\ref{proof} to construct the Gr\"obner basis and in \S\ref{sec:irreduc
 %%%%%%%%%%%%%%
 \medskip
 \noindent
-\textbf{Acknowledgement.} We would like to thank John Machacek for his prior work on the project and for his suggestion to continue working on it. 
-We also thank Christian Stump for pointing us to their work~\cite{ESS}, see Remark~\ref{rem:stump}.
+\textbf{Acknowledgement.} We would like to thank John Machacek for his prior work on the project and for his suggestion to continue working on it. We thanks Hyewon Jeon for  some initial conversations.
+We also thank Christian Stump for pointing us to their work~\cite{ESS}, see Remark~\ref{rem:stump}. The research was supported by Bergeron's York Research Chair and NSERC.
 
 
 %%%%%%%%%%%%%%
@@ -951,7 +961,7 @@ $$
     M_\alpha =A_\alpha^{-1}  = \frac{1}{\ell_1(\alpha)+1} 
     \begin{bmatrix} -\ell_1(\alpha) & 1 & \cdots  & 1 \\1 & -\ell_1(\alpha)& \cdots & 1 \\ \vdots & \vdots  & \ddots & \vdots \\ 1 & 1 & \cdots  & -\ell_1(\alpha)  \end{bmatrix}
 $$
-Since $A_\alpha$ is invertible, we have that $\{\mathcal{S}_{\alpha, k_i}\}_{1 \leq i \leq \ell_1(\alpha)}$ is linearly independent. Let $V$ be the $\field$-span of $\{\mathcal{S}_{\alpha, k_i}\}_{1 \leq i \leq \ell_1(\alpha)}$ and we define $\blue{\phi}\colon V \to  V$ as 
+Since $A_\alpha$ is invertible, we have that $\{\mathcal{S}_{\alpha, k_i}\}_{1 \leq i \leq \ell_1(\alpha)}$ is linearly independent. Let $V$ be the $\field$-span of\break $\{\mathcal{S}_{\alpha, k_i}\}_{1 \leq i \leq \ell_1(\alpha)}$ and we define $\blue{\phi}\colon V \to  V$ as 
 \begin{equation} \label{lemma_phi_map2}
     \blue{\phi} (\mathcal{S}_{\alpha, k_i}) = \sum_{j=1}^{\ell_1(\alpha)} c_{ij} \mathcal{S}_{\alpha, {k_{j}}},
 \end{equation}
@@ -1024,7 +1034,7 @@ This shows the reverse inclusion and concludes our proof of
 %%  Terminating the algorithm
 %%%%%%%%%%%%%%
 \subsection{\label{property_c}Termination of Buchberger's Algorithm}
-In the previous subsections, we computed the set of remainders  of S-polynomials $\overline{S(g_\alpha, k_1)}^{F_{\ell_1(\alpha)-1}}, \dots, \overline{S(g_\alpha, k_{\ell_1(\alpha)})}^{F_{\ell_1(\alpha)-1}}$ and used Lemma~\ref{lemma_phi_map} to conclude that, $\{g_{\alpha^{(k_i)}}\}_{1\le i\le \ell_1(\alpha)}$ is obtained as an intermediate step in the Buchberger's Algorithm. If $\ell_1(\alpha)-1<\ell$, then these polynomials are already in $F_\ell$ so the division with respect to $F_\ell$ will be zero (no new polynomials). For $\ell_1(\alpha)-1=\ell$, we will obtain a new polynomial and construct $F_{\ell+1}$ in this way, as long as $\ell_1(\alpha)-1 \le \Floor{\frac{n-1}{2}}-1$.
+In the previous subsections, we computed the set of remainders  of S-polynomials $\overline{S(g_\alpha, k_1)}^{F_{\ell_1(\alpha)-1}}, \dots$,\break $\overline{S(g_\alpha, k_{\ell_1(\alpha)})}^{F_{\ell_1(\alpha)-1}}$ and used Lemma~\ref{lemma_phi_map} to conclude that, $\{g_{\alpha^{(k_i)}}\}_{1\le i\le \ell_1(\alpha)}$ is obtained as an intermediate step in the Buchberger's Algorithm. If $\ell_1(\alpha)-1<\ell$, then these polynomials are already in $F_\ell$ so the division with respect to $F_\ell$ will be zero (no new polynomials). For $\ell_1(\alpha)-1=\ell$, we will obtain a new polynomial and construct $F_{\ell+1}$ in this way, as long as $\ell_1(\alpha)-1 \le \Floor{\frac{n-1}{2}}-1$.
 We need to show that for $\ell = \lfloor \frac{n-1}{2} \rfloor$, the set $F_\ell$ is the reduced Gr\"obner basis.
 The next lemma shows that the set
 \begin{equation} \label{Eq:basis1}
@@ -1209,7 +1219,7 @@ Considering the disjoint decomposition of the basis $B$ in  Equation~\eqref{Eq:B
 %%  Irreducible decomposition of R/I
 %%%%%%%%%%
 \subsection{Irreducible graded decomposition of $R/I$}\label{ss:irreducible}
-The symmetric group $S_n=\big\{ \sigma \big| \sigma\colon \{1,\ldots n\}\to\{1,\ldots,n\}\text{ bijection}\big\}$ acts on polynomials in $R$ with 
+The symmetric group $S_n=\big\{ \sigma \big| \sigma\colon \{1,\ldots n\}\to\{1,\ldots,n\}\text{ bijection}\big\}$ acts on polynomials in $R$ with\break 
 $\sigma P(y_1,\ldots,y_n)=P(y_{\sigma(1)},\ldots,y_{\sigma(n)})$. The generators of the ideal $I$ are mapped to the other generators of $I$ under this action. Hence, the ideal $I$ is invariant under the action of $S_n$. We can thus have a well-defined $\field$-linear action of $S_n$ on the quotient $N=R/I$. In fact, since the  action preserves degree, we have an action of $S_n$ on each graded piece $N^{(k)}$. Additionally, we are interested in describing the decomposition of that action in terms of the irreducible representation. For more details on the representation of the symmetric group see  \cite{Sagan}. For our needs, the irreducible representation of the symmetric group can be nicely constructed directly in the space of polynomials. We can construct such a representation using Specht polynomials~\cite{Specht}, which we introduced in \S\ref{ss:specht}.
 
 It is known~\cite{Sagan,Specht} that for a fixed shape $\lambda$, the set 
